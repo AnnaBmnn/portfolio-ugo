@@ -1,29 +1,68 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header/>
+    <router-view
+    />
   </div>
 </template>
+
+<script>
+import Header from "@/components/Header.vue";
+
+export default {
+  name: "app",
+  components: {
+    Header
+  },
+  data: function(){
+    return {
+      home: {
+        title: "Oh ! Hey there sunshine ",
+        description: "I’m Ugo Olsak, a<span class='bold'> fourth year student at HETIC</span> and <span class='bold'>freelancer</span>. Even though the digital environment is for me like water for a fish, I grew up wondering why things were made the way they are (...consider me a very self aware fish). This quest led me to an emerging passion, <span class='bold'>design.</span>",
+      },
+      commun: {
+        contact: "olsak.ugo@gmail.com"
+      },
+      social: {
+        twitter: "twitter.fr",
+        behance: "behance.com",
+        dribble: "dribble.com",
+        linkedin: "linkedin.fr"
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  margin: 0;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;;
+}
+.bold {
+  font-weight: bold;
+}
+a {
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
   }
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 </style>

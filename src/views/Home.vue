@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+    <!-- <Landing
+      v-bind:title="hello"
+      v-bind:description="home.description"
+      v-bind:commun="commun"
+      v-bind:social="social"
+    /> -->
+    <Landing/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Landing from "@/components/Landing.vue";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    Landing
   }
 };
 </script>
