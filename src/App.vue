@@ -46,6 +46,9 @@ body, ul, li {
   margin: 0;
   padding: 0;
 }
+.title {
+  font-size: 3rem;
+}
 
 li {
   text-decoration: none;

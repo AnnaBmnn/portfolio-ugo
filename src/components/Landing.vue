@@ -24,6 +24,7 @@
 <script>
 import Socials from "@/components/Socials.vue";
 
+
 export default {
     name: "Landing",
     props: {
