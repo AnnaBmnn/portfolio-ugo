@@ -14,6 +14,17 @@
             <project-bloc />
             <project-bloc />
             <project-bloc />
+            <div class="casesStudies__byTheWay">
+                <span class="casesStudies__byTheWaySurtitle">
+                    By the way
+                </span>
+                <div class="casesStudies__byTheWayText">
+                    I’m looking for a 6 month internship starting in june 2018. <a class="casesStudies__byTheWayContact" href="mailto:olsak.ugo@gmail.com">Contact me.</a>
+                </div>
+                <div class="casesStudies__byTheWayInstruction">
+                    Click to copy to clipboard
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -38,7 +49,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .casesStudies__container {
-    margin: 200px auto;
+    margin: 5vh auto 10vh;
     display: flex;
     flex-direction: column;
 }
@@ -63,5 +74,31 @@ export default {
         left: 0;
         background-color: black;
     }
+}
+.casesStudies__byTheWaySurtitle {
+    margin-left: 5%;
+    font-size: 1rem;
+}
+.casesStudies__byTheWayText {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+.casesStudies__byTheWayContact {
+    position: relative;
+    &:after {
+        content: '';
+        height: 1px;
+        width: calc(100%);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: black;
+    }
+}
+.casesStudies__byTheWayInstruction {
+    font-size: 1rem;
+    float: right;
+    margin-top: 10vh;
 }
 </style>

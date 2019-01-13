@@ -41,13 +41,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin: 0;
+  width: 100vw;
+  overflow: hidden;
+  font-size: 1.12rem;
 }
-body, ul, li {
+body, ul, li, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
 }
 .title {
   font-size: 3rem;
+  img {
+    height: 60px;
+    width: 60px;
+    transform: translateY(10px);
+  }
 }
 
 li {

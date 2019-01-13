@@ -45,7 +45,7 @@ export default {
 .project {
     height: 600px;
     width: 480px;
-    margin: 180px 0;
+    margin: 15vh 0;
     position: relative;
     .project__img {
         position: relative;

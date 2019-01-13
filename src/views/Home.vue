@@ -8,6 +8,9 @@
     /> -->
     <Landing/>
     <CaseStudies/>
+    <SmallSection/>
+    <FaceBloc/>
+    <Experiments/>
   </div>
 </template>
 
@@ -15,12 +18,18 @@
 // @ is an alias to /src
 import Landing from "@/components/Landing.vue";
 import CaseStudies from "@/components/CaseStudies.vue";
+import SmallSection from "@/components/SmallSection.vue";
+import Experiments from "@/components/Experiments.vue";
+import FaceBloc from "@/components/FaceBloc.vue";
 
 export default {
   name: "home",
   components: {
     Landing,
-    CaseStudies
+    CaseStudies,
+    SmallSection,
+    Experiments,
+    FaceBloc
   }
 };
 </script>

@@ -18,6 +18,7 @@ export default {
   .nav__link {
     position: fixed;
     top: 40px;
+    z-index: 100;
   }
   .nav__link--olsak {
     left: 40px;
