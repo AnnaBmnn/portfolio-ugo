@@ -2,18 +2,20 @@
     <section class="experiments">
         <div class="container">
             <h2 class="title bold">
-                Last but not least, some experiments
+                {{title}}
                 <img src="../assets/lab-emoji.svg">
             </h2>
             <div class="experiments__description">
-                Since i’m still a student I like learning (always wil) 
-                and trying stuff. Here is a quick selection of some of
-                 my experiments so far. 
+                {{description}}
             </div>
             <div class="experiments__container">
-                <experiment/>
-                <experiment/>
-                <experiment/>
+                <experiment
+                    v-for="(value) in experimentsArray"
+                    :key="value.slug"
+                    :img="value.img"
+                    :date="value.date"
+                    :credit="value.credit"
+                 />
             </div>
         </div>
     </section>
@@ -26,6 +28,11 @@ export default {
     name: "Experiments",
     components: {
         Experiment
+    },
+    props: {
+        title: String,
+        description: String,
+        experimentsArray: Object
     }
 };
 </script>

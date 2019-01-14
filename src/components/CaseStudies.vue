@@ -3,26 +3,35 @@
         <div class="casesStudies__container container">
             <div class="caseStudies__introduction">
                 <h2 class="caseStudies__title title">
-                    Case Studies
+                    {{caseStudy.title}}
                     <img src="../assets/pregnant-emoji.svg">
                 </h2>
                 <span>
-                    A quick selection of my work as an intern, freelance and student.
+                    {{caseStudy.description}}
                 </span>
                 <router-link class="caseStudies__link" to="/about">View all projects</router-link>
             </div>
-            <project-bloc />
-            <project-bloc />
-            <project-bloc />
+            <project-bloc
+                v-for="(value) in caseStudy.cases"
+                :key="value.slug"
+                :img="value.img"
+                :name="value.name"
+                :slug="value.slug"
+                :forme="value.forme"
+                :year="value.year"
+                :role="value.role"
+                :context="value.context"
+            />
             <div class="casesStudies__byTheWay">
                 <span class="casesStudies__byTheWaySurtitle">
-                    By the way
+                    {{caseStudy.subSection.surtitle}}
                 </span>
                 <div class="casesStudies__byTheWayText">
-                    I’m looking for a 6 month internship starting in june 2018. <a class="casesStudies__byTheWayContact" href="mailto:olsak.ugo@gmail.com">Contact me.</a>
+                    {{caseStudy.subSection.title}}
+                    <a class='casesStudies__byTheWayContact' href='mailto:olsak.ugo@gmail.com'>Contact me.</a>
                 </div>
-                <div class="casesStudies__byTheWayInstruction">
-                    Click to copy to clipboard
+                <div class="casesStudies__byTheWayInstruction" >
+                    {{caseStudy.subSection.instruction}}
                 </div>
             </div>
         </div>
@@ -35,10 +44,7 @@ import ProjectBloc from "@/components/ProjectBloc.vue";
 export default {
     name: "CaseStudies",
     props: {
-        title: String,
-        description: String,
-        commun: Object,
-        social: Object
+        caseStudy: Object
     },
     components: {
         ProjectBloc

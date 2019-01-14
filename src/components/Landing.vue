@@ -3,21 +3,17 @@
         <div class="landing__wrapper container">
             <div class="landing__container">
                 <h1 class="title">
-                    Oh ! Hey there sunshine 
+                    {{title}}
                     <img src="../assets/sun-emoji.svg">
                 </h1>
-                <div class="landing__txt">
-                    I’m Ugo Olsak, a
-                        <span class='bold'> fourth year student at HETIC</span> 
-                    and <span class='bold'>freelancer</span>. Even though the 
-                    digital environment is for me like water for a fish, I grew 
-                    up wondering why things were made the way they are 
-                    (...consider me a very self aware fish). This quest led me to 
-                    an emerging passion, <span class='bold'>design.</span>
+                <div class="landing__txt" v-html="description">
                 </div>  
             </div>
         </div>
-        <socials />
+        <socials
+            v-bind:social="commun.social"
+            v-bind:contact="commun.contact"
+        />
     </section>
 </template>
 
@@ -30,8 +26,7 @@ export default {
     props: {
         title: String,
         description: String,
-        commun: Object,
-        social: Object
+        commun: Object
     },
     components: {
         Socials

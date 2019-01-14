@@ -14,7 +14,7 @@ export default {
   components: {
     Header
   },
-  data: function(){
+  data (){
     return {
       home: {
         title: "Oh ! Hey there sunshine ",

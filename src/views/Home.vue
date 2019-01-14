@@ -1,16 +1,29 @@
 <template>
   <div class="home">
-    <!-- <Landing
-      v-bind:title="hello"
+    <Landing
+      v-bind:title="home.title"
       v-bind:description="home.description"
       v-bind:commun="commun"
-      v-bind:social="social"
-    /> -->
-    <Landing/>
-    <CaseStudies/>
-    <SmallSection/>
-    <FaceBloc/>
-    <Experiments/>
+    />
+    <CaseStudies
+      v-bind:caseStudy="home.caseStudy"
+    />
+    <SmallSection
+      v-bind:surtitle="home.freelance.surtitle"
+      v-bind:title="home.freelance.title"
+      v-bind:description="home.freelance.description"
+
+    />
+    <FaceBloc
+      v-bind:title="home.face.title"
+      v-bind:description="home.face.description"
+      v-bind:img="home.face.img"
+    />
+    <Experiments
+      v-bind:title="home.experimentsBloc.title"
+      v-bind:description="home.experimentsBloc.description"
+      v-bind:experimentsArray="home.experimentsBloc.experiments"
+    />
   </div>
 </template>
 
@@ -30,6 +43,10 @@ export default {
     SmallSection,
     Experiments,
     FaceBloc
+  },
+  props: {
+    home: Object,
+    commun: Object
   }
 };
 </script>

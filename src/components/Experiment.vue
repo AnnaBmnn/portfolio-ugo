@@ -2,9 +2,9 @@
     <div class="experiment">
         <img class="experiment__img" src="../assets/experiment.png">
         <div class="experiment__infos">
-            08.11.18
+            {{date}}
             <div class="bold">
-                PAN/JIN dribbble shot
+                {{credit}}
             </div>
         </div>
     </div>
@@ -13,7 +13,12 @@
 <script>
 
 export default {
-    name: "Experiment"
+    name: "Experiment",
+    props: {
+        date: String,
+        credit: String,
+        img: String
+    }
 };
 </script>
 

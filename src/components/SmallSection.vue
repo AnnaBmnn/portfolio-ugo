@@ -1,14 +1,14 @@
 <template>
     <section class="smallSection">
         <div class="container">
-            <h4 class="smallSection__surtitle">Available for freelance</h4>
+            <h4 class="smallSection__surtitle">{{surtitle}}</h4>
             <h2 class="smallSection__title title bold">
-                To the moon and back
+                {{title}}
                 <img src="../assets/freelance-emoji.svg">
             </h2>
-            <div class="smallSection__info">
-                Always on the for new opportunities.
-                Once again feel free to <a href="mailto:olsak.ugo@gmail.com">contact me.</a>
+            <div class="smallSection__info" >
+                {{description}}
+                <a class="link" href="mailto:olsak.ugo@gmail.com">contact me.</a>
             </div>
         </div>
     </section>
@@ -17,7 +17,12 @@
 <script>
 
 export default {
-    name: "SmallSection"
+    name: "SmallSection",
+    props: {
+        surtitle: String,
+        title: String,
+        description: String
+    }
 };
 </script>
 
@@ -36,7 +41,7 @@ export default {
 }
 .smallSection__info {
     width: 31%;
-    a {
+    .link {
         position: relative;
         color: white;
         &:after {

@@ -5,7 +5,7 @@
                 Contact
             </div>
             <div>
-                olsak.ugo@gmail.com
+                {{contact}}
             </div>
 
         </div>
@@ -14,10 +14,18 @@
                 Social
             </div>
             <ul>
-                <li class="socials__item"><a>Twitter</a></li>
-                <li class="socials__item"><a>Behance</a></li>
-                <li class="socials__item"><a>Dribbble</a></li>
-                <li class="socials__item"><a>Linkedin</a></li>
+                <li 
+                    class="socials__item" 
+                    v-for="(value, key, index) in social"
+                    :key="index"  
+                    
+                >
+                    <a 
+                        :href="value"
+                    >
+                        {{key}}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -25,7 +33,11 @@
 
 <script>
 export default {
-    name: "socials"
+    name: "socials",
+    props: {
+        contact: String,
+        social: Object
+    },
 };
 </script>
 

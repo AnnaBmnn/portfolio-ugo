@@ -5,11 +5,11 @@
         </div>
         <div class="faceBloc__textContainer"> 
             <h2 class="caseStudies__title title">
-                    Putting a face on a studio 
+                    {{title}}
                 <img src="../assets/face-emoji.svg">
             </h2>
             <div class="faceBloc__description">
-                Just so you know what I look like, in case we ever met.
+                {{description}}
             </div> 
         </div>
         <ul class="faceBloc__controls">
@@ -26,7 +26,12 @@
 <script>
 
 export default {
-    name: "FaceBloc"
+    name: "FaceBloc",
+    props: {
+        title: String,
+        description: String,
+        img: String
+    }
 };
 </script>
 
