@@ -32,7 +32,7 @@ export default {
     props: {
         title: String,
         description: String,
-        experimentsArray: Object
+        experimentsArray: Array
     }
 };
 </script>

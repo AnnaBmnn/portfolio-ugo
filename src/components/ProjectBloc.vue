@@ -1,7 +1,11 @@
 <template>
-    <div class="project">
+    <div 
+        class="project" 
+        @mouseover="mouseOver"
+        @mouseleave="mouseLeave"
+    >
         <img class="project__img"  src="../assets/project.png">
-        <img class="project__form" src="../assets/projectForm.svg">
+        <forme ref="turbForm" class="project__form" />
         <span class="project__date">{{year}}</span>
         <div class="project__infos">
             <div class="project__info">
@@ -25,7 +29,9 @@
 </template>
 
 <script>
-console.log("project")
+import { TweenMax } from 'gsap'
+import Forme from "@/components/Forme.vue";
+
 export default {
     name: "ProjectBloc",
     props: {
@@ -36,7 +42,34 @@ export default {
         year: String,
         role: String,
         context: String
+    },
+    components: {
+        Forme
+    },
+    methods: {
+        mouseOver: function(){
+            console.log("hover");
+            const forme = this.$refs.turbForm ;
+            console.log(forme);
+            TweenMax.to("#turbwave", 2, {
+                // attr:{"fill":"#000000"},
+                attr:{"baseFrequency":0.01},
+                repeat:-1,
+                yoyo:true
+            });
+        },
+        mouseLeave: function(){
+            console.log("moouse out")
+            
+        },
+        mounted() { 
+            const { box } = this.$refs
+            const timeline = new TimelineLite() 
+            
+            timeline.to(box, 1, { x: 200, rotation: 90 }) 
+        } 
     }
+
 };
 </script>
 
