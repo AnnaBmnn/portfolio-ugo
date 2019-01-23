@@ -44,6 +44,7 @@ export default {
     @media (max-width: 700px){
         flex-direction: column;
         height: unset;
+        padding-top: 15vh;
     }
 }
 .faceBloc__imgContainer {
@@ -53,8 +54,8 @@ export default {
     img {
         transform: translateY(-50px);
         object-fit: cover;
-        min-width: 100%;
-        min-height: 100%;
+        width: 100%;
+        height: auto;
     }
     @media (max-width: 700px){
         order: 3;
@@ -63,6 +64,9 @@ export default {
         img {
             width: 100%;
             height: auto;
+            min-height: unset;
+            transform: translateY(0px);
+
         }
     }
 }
@@ -74,11 +78,30 @@ export default {
     flex-direction: column;
     justify-content: center;
     @media (max-width: 700px){
+        width: 80%;
+        margin: 0 auto;
         order: 1;
+        padding-left: 0% ;
+
+    }
+}
+.caseStudies__title {
+    font-family: 'Gotham';
+    font-weight: normal;
+
+    @media (max-width: 700px){
+        font-size: 1.75rem;
+        width: 80%;
     }
 }
 .faceBloc__description {
     width: 40%;
+    margin: 20px 0;
+    @media (max-width: 700px){
+        width: 90%;
+        line-height: 1.8;
+        margin: 20px 0 30px;
+    }
 }
 .faceBloc__controls {
     position: absolute;
@@ -88,12 +111,13 @@ export default {
         margin-left: 30px;
         display: inline-block;
         a {
+            font-weight: 200;
             position: relative;
         }
     }
 
     a.active {
-        font-weight: bold;
+        font-weight: normal;
         &:after {
             content: '';
             height: 1px;
@@ -103,6 +127,17 @@ export default {
             right: 0;
             background-color: black;
         }
+    }
+    @media (max-width: 700px){
+        position: unset;
+        order: 2;
+        width: 90%;
+        text-align: right;
+        margin-bottom: 50px;
+        li {
+            margin-left: 40px;
+        }
+
     }
 }
 </style>

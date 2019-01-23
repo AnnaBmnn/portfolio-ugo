@@ -1,15 +1,13 @@
 <template>
-    <section class="smallSection">
+    <section :class="theme" class="smallSection">
         <div class="container">
-            <h4 class="smallSection__surtitle">{{surtitle}}</h4>
+            <h4 :v-show="surtitle" class="smallSection__surtitle">{{surtitle}}</h4>
             <h2 class="smallSection__title title bold">
                 {{title}}
                 <img src="../assets/img/freelance-emoji.svg">
             </h2>
-            <div class="smallSection__info" >
-                {{description}}
-                <a class="link" href="mailto:olsak.ugo@gmail.com">contact me.</a>
-            </div>
+            <div class="smallSection__info" v-html="description" />
+
         </div>
     </section>
 </template>
@@ -21,7 +19,8 @@ export default {
     props: {
         surtitle: String,
         title: String,
-        description: String
+        description: String,
+        theme: String
     }
 };
 </script>
@@ -32,8 +31,15 @@ export default {
     height: 80vh;
     display: flex;
     align-items: center;
-    background-color: #161616;
-    color: white;
+
+    &.dark {
+        background-color: #161616;
+        color: white;
+    }
+    &.light {
+        background-color: white;
+        color: #161616;
+    }
     @media (max-width: 700px){
         height: 65vh;
     }

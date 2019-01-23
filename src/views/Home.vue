@@ -1,19 +1,22 @@
 <template>
   <div class="home">
-    <Landing
-      v-bind:title="home.title"
-      v-bind:description="home.description"
-      v-bind:commun="commun"
-    />
-    <CaseStudies
-      v-bind:caseStudy="home.caseStudy"
-    />
-    <SmallSection
-      v-bind:surtitle="home.freelance.surtitle"
-      v-bind:title="home.freelance.title"
-      v-bind:description="home.freelance.description"
+    <div class="animateSection">
+      <Landing
+        v-bind:title="home.title"
+        v-bind:description="home.description"
+        v-bind:commun="commun"
+      />
+      <CaseStudies
+        v-bind:caseStudy="home.caseStudy"
+      />
+      <SmallSection
+        v-bind:surtitle="home.freelance.surtitle"
+        v-bind:title="home.freelance.title"
+        v-bind:description="home.freelance.description"
+        theme="dark"
+      />
+    </div>  
 
-    />
     <FaceBloc
       v-bind:title="home.face.title"
       v-bind:description="home.face.description"
@@ -23,6 +26,11 @@
       v-bind:title="home.experimentsBloc.title"
       v-bind:description="home.experimentsBloc.description"
       v-bind:experimentsArray="home.experimentsBloc.experiments"
+    />
+    <SmallSection
+      v-bind:title="home.thanks.title"
+      v-bind:description="home.thanks.text"
+      theme="light"
     />
   </div>
 </template>

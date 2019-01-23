@@ -45,7 +45,7 @@ const datas = {
         freelance: {
             surtitle: "Available for freelance",
             title: "To the moon and back",
-            description: 'Always on the for new opportunities. Once again feel free to '
+            description: 'Always on the for new opportunities. Once again feel free to <a class="link" href="mailto:olsak.ugo@gmail.com">contact me.</a>'
         },
         face: {
             title: "Putting a face on a folio",
@@ -72,6 +72,10 @@ const datas = {
                     credit: "Monia Merlo - Philosophical beauty"
                 }
             ]
+        },
+        thanks: {
+            title: "Thanks folk",
+            text: "Can't wait to join your team : <a href='mailto:olsak.ugo@gmail.com'>olsak.ugo@gmail.com</a>"
         }
     },
     commun: {

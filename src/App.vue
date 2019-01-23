@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss">
 @import "~@/assets/scss/_fonts.scss";
+@import "~@/assets/scss/_animateSection.scss";
 
 #app {
   font-family: 'Graphik', "Avenir", Helvetica, Arial, sans-serif;
