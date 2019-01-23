@@ -13,6 +13,8 @@
         v-bind:surtitle="home.freelance.surtitle"
         v-bind:title="home.freelance.title"
         v-bind:description="home.freelance.description"
+        v-bind:contact="home.freelance.contact"
+        v-bind:instruction="home.freelance.instruction"
         theme="dark"
       />
     </div>  
@@ -30,6 +32,8 @@
     <SmallSection
       v-bind:title="home.thanks.title"
       v-bind:description="home.thanks.text"
+      v-bind:contact="home.thanks.contact"
+      v-bind:instruction="home.thanks.instruction"
       theme="light"
     />
   </div>

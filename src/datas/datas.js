@@ -38,14 +38,16 @@ const datas = {
                 surtitle: "By the way",
                 title: 
                     "I’m looking for a 6 month internship starting in june 2018.",
-
+                contact: "Contact me",
                 instruction: "Click to copy to clipboard"
             }
         },
         freelance: {
             surtitle: "Available for freelance",
             title: "To the moon and back",
-            description: 'Always on the for new opportunities. Once again feel free to <a class="link" href="mailto:olsak.ugo@gmail.com">contact me.</a>'
+            contact: "contact me",
+            instruction: "Click to copy to clipboard",
+            description: 'Always on the for new opportunities. Once again feel free to'
         },
         face: {
             title: "Putting a face on a folio",
@@ -75,7 +77,9 @@ const datas = {
         },
         thanks: {
             title: "Thanks folk",
-            text: "Can't wait to join your team : <a href='mailto:olsak.ugo@gmail.com'>olsak.ugo@gmail.com</a>"
+            text: "Can't wait to join your team : ",
+            contact: "olsak.ugo@gmail.com",
+            instruction: "Click to copy to clipboard",
         }
     },
     commun: {
@@ -85,7 +89,8 @@ const datas = {
             behance: "behance.com",
             dribble: "dribble.com",
             linkedin: "linkedin.fr"
-        }
+        },
+        
     },
 
 }

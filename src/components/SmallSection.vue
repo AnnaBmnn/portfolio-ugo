@@ -6,26 +6,45 @@
                 {{title}}
                 <img src="../assets/img/freelance-emoji.svg">
             </h2>
-            <div class="smallSection__info" v-html="description" />
+            <div class="smallSection__info" >
+                {{description}}
+                <CopyClickLink
+                    v-bind:instruction="instruction"
+                    v-bind:linkContent="contact"
+                />
+            </div>
 
         </div>
     </section>
 </template>
 
 <script>
+import CopyClickLink from "@/components/CopyClickLink.vue";
 
 export default {
     name: "SmallSection",
+    components: {
+        CopyClickLink
+    },
     props: {
         surtitle: String,
         title: String,
         description: String,
-        theme: String
+        theme: String,
+        contact: String,
+        instruction: String
     }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+.dark {
+    .copyClickLink__contact:after {
+        background-color: white;
+    }
+}
+</style>
 <style scoped lang="scss">
 .smallSection {
     height: 80vh;
@@ -39,6 +58,9 @@ export default {
     &.light {
         background-color: white;
         color: #161616;
+        .smallSection__info {
+            width: 40%;
+        }
     }
     @media (max-width: 700px){
         height: 65vh;

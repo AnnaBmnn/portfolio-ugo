@@ -28,10 +28,10 @@
                 </span>
                 <div class="casesStudies__byTheWayText">
                     {{caseStudy.subSection.title}}
-                    <a class='casesStudies__byTheWayContact' href='mailto:olsak.ugo@gmail.com'>Contact me.</a>
-                </div>
-                <div class="casesStudies__byTheWayInstruction" >
-                    {{caseStudy.subSection.instruction}}
+                    <CopyClickLink
+                        v-bind:instruction="caseStudy.subSection.instruction"
+                        v-bind:linkContent="caseStudy.subSection.contact"
+                    />
                 </div>
             </div>
         </div>
@@ -40,6 +40,7 @@
 
 <script>
 import ProjectBloc from "@/components/ProjectBloc.vue";
+import CopyClickLink from "@/components/CopyClickLink.vue";
 
 export default {
     name: "CaseStudies",
@@ -47,7 +48,8 @@ export default {
         caseStudy: Object
     },
     components: {
-        ProjectBloc
+        ProjectBloc,
+        CopyClickLink
     }
 };
 </script>
@@ -122,21 +124,6 @@ export default {
         line-height: 1.8;
     }
 }
-.casesStudies__byTheWayContact {
-    position: relative;
-    &:after {
-        content: '';
-        height: 1px;
-        width: calc(100%);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: black;
-    }
-}
-.casesStudies__byTheWayInstruction {
-    font-size: 1rem;
-    float: right;
-    margin-top: 10vh;
-}
+
+
 </style>
