@@ -28,12 +28,19 @@ export default {
     margin: 15vh 0;
     width: 70%;
     position: relative;
+
     img {
         width: 100%;
         height: auto;
     }
     &:nth-child(even){
         align-self: flex-end;
+    }
+    @media (max-width: 700px){
+        width: 100%;
+        &:nth-child(even){
+            align-self: flex-start;
+        }
     }
 }
 .experiment__infos {
@@ -42,5 +49,11 @@ export default {
     top: 100%;
     right: 0;
     text-align: right;
+    @media (max-width: 700px){
+        text-align: left;
+        right: unset;
+        left: 0;
+
+    }
 }
 </style>

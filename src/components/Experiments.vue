@@ -43,7 +43,11 @@ export default {
     padding: 15vh 0;
     background-color: #161616;
     color: white;
-
+    .title {
+        @media (max-width: 700px){
+            font-size: 1.75rem;
+        }
+    }
 }
 .experiments__container {
     display: flex;
@@ -52,5 +56,8 @@ export default {
 .experiments__description {
     width: 50%;
     margin-top: 20px;
+    @media (max-width: 700px){
+        width: 100%;
+    }
 }
 </style>

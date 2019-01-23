@@ -34,13 +34,18 @@ export default {
     align-items: center;
     background-color: #161616;
     color: white;
+    @media (max-width: 700px){
+        height: 65vh;
+    }
 }
 .smallSection__surtitle {
     margin: 0;
     font-size: 1rem;
+    font-weight: normal;
 }
 .smallSection__info {
     width: 31%;
+    margin-top: 20px;
     .link {
         position: relative;
         color: white;
@@ -54,8 +59,17 @@ export default {
             background-color: white;
         }
     }
+    @media (max-width: 700px){
+        width: 100%;
+    }
 }
 .smallSection__title {
     margin: 0;
+    font-family :'Gotham';
+    font-weight: normal;
+    @media (max-width: 700px){
+        font-size: 1.75rem;
+    }
+
 }
 </style>

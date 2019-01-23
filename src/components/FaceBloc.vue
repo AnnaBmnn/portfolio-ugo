@@ -41,6 +41,10 @@ export default {
     height: 90vh;
     display: flex;
     position: relative;
+    @media (max-width: 700px){
+        flex-direction: column;
+        height: unset;
+    }
 }
 .faceBloc__imgContainer {
     width: 41%;
@@ -52,6 +56,15 @@ export default {
         min-width: 100%;
         min-height: 100%;
     }
+    @media (max-width: 700px){
+        order: 3;
+        width: 80%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 .faceBloc__textContainer {
     width: 60%;
@@ -60,6 +73,9 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 700px){
+        order: 1;
+    }
 }
 .faceBloc__description {
     width: 40%;

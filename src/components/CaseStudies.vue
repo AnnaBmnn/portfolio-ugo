@@ -55,7 +55,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .casesStudies__container {
-    margin: 5vh auto 10vh;
+    margin: 10vh auto;
     display: flex;
     flex-direction: column;
 }
@@ -99,10 +99,16 @@ export default {
 
     }
 }
+.casesStudies__byTheWay {
+    margin: 15vh 0 12vh;
+}
 .casesStudies__byTheWaySurtitle {
-    margin-left: 5%;
     font-size: 1rem;
     font-weight: normal;
+    margin-left: 5%;
+    @media (max-width: 700px){
+        margin-left: 0;
+    }
 }
 .casesStudies__byTheWayText {
     width: 90%;
@@ -110,6 +116,11 @@ export default {
     font-size: 2.5rem;
     line-height: 60px;
     letter-spacing: 3;
+    @media (max-width: 700px){
+        width: 100%;
+        font-size: 1.7rem;
+        line-height: 1.8;
+    }
 }
 .casesStudies__byTheWayContact {
     position: relative;

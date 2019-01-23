@@ -46,7 +46,7 @@ export default {
 .socials {
     width: 66%;
     margin: 10vh 0 ;
-    padding:  5vh 0 5vh 10%;
+    padding:  7vh 0 7vh 10%;
     box-sizing: border-box;
     background-color: #FAFAFA;
     font-size: 1rem;
@@ -70,12 +70,14 @@ export default {
     } 
 }
 .socials__title {
-    margin-bottom: 20px;
+    line-height: 1;
+    margin-bottom: 2vh;
     @media (max-width: 700px){
         margin-bottom: 5px;
     }  
 }
 .socials__item {
+    line-height: 1;
     margin-right: 40px;
     display: inline-block;
     box-sizing: border-box;

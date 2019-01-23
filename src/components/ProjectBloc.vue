@@ -89,6 +89,14 @@ export default {
     &:nth-child(odd){
         align-self: flex-end;
     }
+    @media (max-width: 700px){
+        width: 100%;
+        height: fit-content;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 .project__title {
     font-family: 'Gotham';
@@ -101,6 +109,10 @@ export default {
     color: white;
     margin: 0;
     z-index: 2;
+    @media (max-width: 700px){
+        font-size: 2.2rem;
+    }
+
 }
 .project__date {
     font-weight: normal;
@@ -147,7 +159,10 @@ export default {
     .project__info {
         font-weight: normal;
         margin-left: 40px;
-
+    }
+    @media (max-width: 700px){
+        top: 15px;
+        line-height: 1.8;
     }
 }
 
