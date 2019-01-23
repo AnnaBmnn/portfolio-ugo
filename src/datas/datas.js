@@ -12,7 +12,7 @@ const datas = {
                     context: "Freelance",
                     name: "La Débraillée",
                     slug: "la-debraillee",
-                    img: "~assets/project.png",
+                    img: "~assets/img/project.png",
                     forme: ""
                 },
                 {
@@ -21,8 +21,8 @@ const datas = {
                     context: "Freelance",
                     name: "Azzaro",
                     slug: "azzaro",
-                    img: "~assets/project.png",
-                    forme: "@/assets/projectForm.svg"
+                    img: "~assets/img/project.png",
+                    forme: "@/assets/img/projectForm.svg"
                 },
                 {
                     year: "2018",
@@ -30,8 +30,8 @@ const datas = {
                     context: "Freelance",
                     name: "Eiffage Galaxy",
                     slug: "eiffage-galaxy",
-                    img: "~assets/project.png",
-                    forme: "@/assets/projectForm.svg"
+                    img: "~assets/img/project.png",
+                    forme: "@/assets/img/projectForm.svg"
                 },
             ],
             subSection: {

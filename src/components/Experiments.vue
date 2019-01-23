@@ -3,7 +3,7 @@
         <div class="container">
             <h2 class="title bold">
                 {{title}}
-                <img src="../assets/lab-emoji.svg">
+                <img src="../assets/img/lab-emoji.svg">
             </h2>
             <div class="experiments__description">
                 {{description}}

@@ -35,15 +35,21 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~@/assets/scss/_fonts.scss";
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Graphik', "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: black;
   margin: 0;
   width: 100vw;
   overflow: hidden;
   font-size: 1.12rem;
+  line-height: 40px;
+  font-weight: 200;
+  background-color: white;
+
 }
 body, ul, li, h1, h2, h3, h4 {
   margin: 0;
@@ -55,7 +61,14 @@ body, ul, li, h1, h2, h3, h4 {
     height: 60px;
     width: 60px;
     transform: translateY(10px);
+    @media (max-width: 700px){
+      height: 40px;
+      width: 40px;
+      transform: translateY(5px);
+
+    }
   }
+
 }
 
 li {
@@ -63,7 +76,7 @@ li {
   list-style: none;;
 }
 .bold {
-  font-weight: bold;
+  font-weight: normal;
 }
 a {
   color: black;

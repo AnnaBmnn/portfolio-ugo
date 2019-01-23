@@ -4,7 +4,7 @@
         @mouseover="mouseOver"
         @mouseleave="mouseLeave"
     >
-        <img class="project__img"  src="../assets/project.png">
+        <img class="project__img"  src="../assets/img/project.png">
         <forme ref="turbForm" class="project__form" />
         <span class="project__date">{{year}}</span>
         <div class="project__infos">
@@ -91,7 +91,8 @@ export default {
     }
 }
 .project__title {
-    //gotham
+    font-family: 'Gotham';
+    font-weight: 500;
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -102,6 +103,7 @@ export default {
     z-index: 2;
 }
 .project__date {
+    font-weight: normal;
     position: absolute;
     top: -30px;
     // bottom: 620px;
@@ -116,6 +118,7 @@ export default {
     bottom: -30px;
     right: 20px;
     line-height: 1.2rem;
+    font-weight: normal;
     font-size: 1.2rem;
     z-index: 2;
 
@@ -138,8 +141,11 @@ export default {
     color: white;
     display: flex;
     z-index: 2;
-
+    .bold {
+        font-weight: 500;
+    }
     .project__info {
+        font-weight: normal;
         margin-left: 40px;
 
     }

@@ -4,9 +4,9 @@
             <div class="caseStudies__introduction">
                 <h2 class="caseStudies__title title">
                     {{caseStudy.title}}
-                    <img src="../assets/pregnant-emoji.svg">
+                    <img src="../assets/img/pregnant-emoji.svg">
                 </h2>
-                <span>
+                <span lass="caseStudies__description">
                     {{caseStudy.description}}
                 </span>
                 <router-link class="caseStudies__link" to="/about">View all projects</router-link>
@@ -63,9 +63,22 @@ export default {
     width: 40%;
     align-self: flex-end;
     font-size: 1.2rem;
+    @media (max-width: 700px){
+        align-self: flex-start;
+        width: 100%;
+    }
 }
 .caseStudies__title {
+    font-family: 'Gotham';
+    font-weight: 500;
     margin-bottom: 20px;
+    @media (max-width: 700px){
+        font-size: 1.75rem;
+    }
+}
+.caseStudies__description {
+    font-size: 0.75rem; 
+    line-height: 30px;
 }
 .caseStudies__link {
     float: right;
@@ -80,15 +93,23 @@ export default {
         left: 0;
         background-color: black;
     }
+    @media (max-width: 700px){
+        float: left;
+        margin-top: 15px;
+
+    }
 }
 .casesStudies__byTheWaySurtitle {
     margin-left: 5%;
     font-size: 1rem;
+    font-weight: normal;
 }
 .casesStudies__byTheWayText {
     width: 90%;
     margin: 0 auto;
     font-size: 2.5rem;
+    line-height: 60px;
+    letter-spacing: 3;
 }
 .casesStudies__byTheWayContact {
     position: relative;

@@ -1,6 +1,6 @@
 <template>
     <div class="experiment">
-        <img class="experiment__img" src="../assets/experiment.png">
+        <img class="experiment__img" src="../assets/img/experiment.png">
         <div class="experiment__infos">
             {{date}}
             <div class="bold">

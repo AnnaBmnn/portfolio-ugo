@@ -7,7 +7,7 @@
             <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="40" />
         </filter>
     </defs>
-    <image id="img" x="0" y="0" width="100%" height="100%" xlink:href="../assets/projectForm.svg" filter="url(#turb)" />
+    <image id="img" x="0" y="0" width="100%" height="100%" xlink:href="../assets/img/projectForm.svg" filter="url(#turb)" />
 </svg>
 </template>
 

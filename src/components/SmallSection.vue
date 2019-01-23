@@ -4,7 +4,7 @@
             <h4 class="smallSection__surtitle">{{surtitle}}</h4>
             <h2 class="smallSection__title title bold">
                 {{title}}
-                <img src="../assets/freelance-emoji.svg">
+                <img src="../assets/img/freelance-emoji.svg">
             </h2>
             <div class="smallSection__info" >
                 {{description}}

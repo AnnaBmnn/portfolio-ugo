@@ -1,12 +1,12 @@
 <template>
     <div class="faceBloc">
         <div class="faceBloc__imgContainer">  
-            <img class="faceBloc__img" src="../assets/olsakUgo.png">
+            <img class="faceBloc__img" src="../assets/img/olsakUgo.png">
         </div>
         <div class="faceBloc__textContainer"> 
             <h2 class="caseStudies__title title">
                     {{title}}
-                <img src="../assets/face-emoji.svg">
+                <img src="../assets/img/face-emoji.svg">
             </h2>
             <div class="faceBloc__description">
                 {{description}}

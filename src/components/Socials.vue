@@ -45,26 +45,44 @@ export default {
 <style scoped lang="scss">
 .socials {
     width: 66%;
-    margin: 100px 0 90px;
-    padding:  65px 0 65px 10%;
+    margin: 10vh 0 ;
+    padding:  5vh 0 5vh 10%;
     box-sizing: border-box;
     background-color: #FAFAFA;
     font-size: 1rem;
     display: flex;
+    @media (max-width: 700px){
+        width: 100%;
+        flex-direction: column;
+
+    }    
 }
 .socials__contact {
     width: 42%;
+    @media (max-width: 700px){
+        margin-bottom: 30px;
+    }    
 }
 .socials__social {
     width: 57%;
+    @media (max-width: 700px){
+        width: 90%;
+    } 
 }
 .socials__title {
     margin-bottom: 20px;
+    @media (max-width: 700px){
+        margin-bottom: 5px;
+    }  
 }
 .socials__item {
     margin-right: 40px;
-}
-.socials__item {
     display: inline-block;
+    box-sizing: border-box;
+    @media (max-width: 700px){
+        width: 50%;
+        margin-right: 0px;
+    } 
 }
+
 </style>

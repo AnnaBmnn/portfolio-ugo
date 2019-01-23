@@ -1,7 +1,9 @@
 <template>
   <header class="nav">
-    <router-link class="nav__link bold nav__link--olsak" to="/">Olsak.</router-link>
-    <router-link class="nav__link nav__link--works" to="/about">My works</router-link>
+    <router-link class="nav__link bold nav__link--olsak" to="/"><span>Olsak.</span></router-link>
+    <router-link class="nav__link nav__link--works" to="/about">Works</router-link>
+    <!-- <a href="./assets/pdf/BaumannAnnaStage.pdf" download="Ugo Olsak Resume" class="nav__link nav__link--resume" >Resume</a> -->
+    <a href="../BaumannAnnaStage.pdf" target="_blank" class="nav__link nav__link--resume" >Resume</a>
   </header>
 </template>
 
@@ -19,11 +21,21 @@ export default {
     position: fixed;
     top: 40px;
     z-index: 100;
+    mix-blend-mode: difference;
+    color: #FFF;
+
   }
   .nav__link--olsak {
+    font-weight: 500;
     left: 40px;
+
   }
   .nav__link--works {
     right: 40px;
   }
+  .nav__link--resume {
+    right: 40px;
+    top: 80px;
+  }
 </style>
+
