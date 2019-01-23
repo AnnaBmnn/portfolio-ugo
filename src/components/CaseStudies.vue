@@ -102,7 +102,7 @@ export default {
     }
 }
 .casesStudies__byTheWay {
-    margin: 15vh 0 12vh;
+    margin: 20vh 0 ;
 }
 .casesStudies__byTheWaySurtitle {
     font-size: 1rem;
