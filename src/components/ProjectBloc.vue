@@ -21,7 +21,10 @@
 
         </div>
 
-        <h3 class="project__title">{{name}}</h3>
+        <h3 class="project__title">
+            {{name}}
+            <span class="project__numero">{{index}}</span>
+        </h3>
         <router-link :to="slug" class="project__link">View Case</router-link>
 
         
@@ -41,7 +44,8 @@ export default {
         forme: String,
         year: String,
         role: String,
-        context: String
+        context: String,
+        index: Number
     },
     components: {
         Forme
@@ -112,6 +116,15 @@ export default {
     @media (max-width: 700px){
         font-size: 2.2rem;
     }
+}
+.project__numero {
+    position: absolute;
+    left: 100%;
+    line-height: 1;
+    top: 0px;
+    font-size: 14px;
+    font-family: 'Graphik';
+    font-weight: 500;
 
 }
 .project__date {

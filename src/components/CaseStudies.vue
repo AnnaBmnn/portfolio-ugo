@@ -12,7 +12,7 @@
                 <router-link class="caseStudies__link" to="/about">View all projects</router-link>
             </div>
             <project-bloc
-                v-for="(value) in caseStudy.cases"
+                v-for="(value, index) in caseStudy.cases"
                 :key="value.slug"
                 :img="value.img"
                 :name="value.name"
@@ -21,6 +21,7 @@
                 :year="value.year"
                 :role="value.role"
                 :context="value.context"
+                :index="index+1"
             />
             <div class="casesStudies__byTheWay">
                 <span class="casesStudies__byTheWaySurtitle">

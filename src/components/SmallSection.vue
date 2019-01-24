@@ -1,7 +1,7 @@
 <template>
     <section :class="theme" class="smallSection">
         <div class="container">
-            <h4 :v-show="surtitle" class="smallSection__surtitle">{{surtitle}}</h4>
+            <h4 :v-if="surtitle" class="smallSection__surtitle">{{surtitle}}</h4>
             <h2 class="smallSection__title title bold">
                 {{title}}
                 <img src="../assets/img/freelance-emoji.svg">
@@ -13,18 +13,21 @@
                     v-bind:linkContent="contact"
                 />
             </div>
-
+            <BackToTopText :v-if="isFooter" />
         </div>
     </section>
 </template>
 
 <script>
+
 import CopyClickLink from "@/components/CopyClickLink.vue";
+import BackToTopText from "@/components/BackToTopText.vue";
 
 export default {
     name: "SmallSection",
     components: {
-        CopyClickLink
+        CopyClickLink,
+        BackToTopText
     },
     props: {
         surtitle: String,
@@ -32,7 +35,8 @@ export default {
         description: String,
         theme: String,
         contact: String,
-        instruction: String
+        instruction: String,
+        isFooter: Boolean
     }
 };
 </script>
@@ -47,6 +51,7 @@ export default {
 </style>
 <style scoped lang="scss">
 .smallSection {
+    position: relative;
     height: 80vh;
     display: flex;
     align-items: center;

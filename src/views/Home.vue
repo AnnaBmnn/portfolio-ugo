@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <ArrowToTop />
+    <ArrowFill />
     <div class="animateSection">
       <Landing
         v-bind:title="home.title"
@@ -35,6 +35,7 @@
       v-bind:description="home.thanks.text"
       v-bind:contact="home.thanks.contact"
       v-bind:instruction="home.thanks.instruction"
+      v-bind:isFooter="true"
       theme="light"
     />
   </div>
@@ -42,7 +43,7 @@
 
 <script>
 // @ is an alias to /src
-import ArrowToTop from "@/components/ArrowToTop.vue";
+import ArrowFill from "@/components/ArrowFill.vue";
 import Landing from "@/components/Landing.vue";
 import CaseStudies from "@/components/CaseStudies.vue";
 import SmallSection from "@/components/SmallSection.vue";
@@ -52,7 +53,7 @@ import FaceBloc from "@/components/FaceBloc.vue";
 export default {
   name: "home",
   components: {
-    ArrowToTop,
+    ArrowFill,
     Landing,
     CaseStudies,
     SmallSection,
