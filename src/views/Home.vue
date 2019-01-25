@@ -16,6 +16,8 @@
         v-bind:description="home.freelance.description"
         v-bind:contact="home.freelance.contact"
         v-bind:instruction="home.freelance.instruction"
+        v-bind:isFooter="false"
+
         theme="dark"
       />
     </div>  

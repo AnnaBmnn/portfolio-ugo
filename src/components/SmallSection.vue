@@ -1,7 +1,7 @@
 <template>
     <section :class="theme" class="smallSection">
         <div class="container">
-            <h4 :v-if="surtitle" class="smallSection__surtitle">{{surtitle}}</h4>
+            <h4 v-if="surtitle" class="smallSection__surtitle">{{surtitle}}</h4>
             <h2 class="smallSection__title title bold">
                 {{title}}
                 <img src="../assets/img/freelance-emoji.svg">
@@ -13,7 +13,8 @@
                     v-bind:linkContent="contact"
                 />
             </div>
-            <BackToTopText :v-if="isFooter" />
+            <BackToTopText v-if="isFooter" />
+            <div v-if="isFooter" class="smallSection__credits">Credits @2018-2019</div>
         </div>
     </section>
 </template>
@@ -104,5 +105,14 @@ export default {
         font-size: 1.75rem;
     }
 
+}
+.smallSection__credits {
+    color: rgba(0,0,0,0.5);
+    line-height: 1;
+    letter-spacing: 1.35px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 </style>

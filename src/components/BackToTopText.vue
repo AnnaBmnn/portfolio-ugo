@@ -16,31 +16,7 @@ export default {
     name: "BackToTopText",
     components: {
         BackToTop
-    },
-    methods: {
-        goToTop (e) {
-            console.log("TOP");
-            window.scrollTo(0,0);
-        }
-    },
-    mounted() {
-
-
-        this.$nextTick(() => {
-            this.documentHeight = document.body.clientHeight;
-            this.windowHeight = window.innerHeight;
-            window.addEventListener('resize', () => {
-                this.documentHeight = document.body.scrollHeight;
-                this.windowHeight = window.innerHeight;
-            });
-        })
-    },
-    created () {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    destroyed () {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
+    }
 };
 </script>
 
