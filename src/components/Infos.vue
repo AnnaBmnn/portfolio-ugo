@@ -1,0 +1,94 @@
+<template>
+    <div class="infos">
+        <div class="infos__social infos__section">
+            <div 
+                class="infos__info"
+                v-for="(value, key, index) in commun"
+                :key="index" 
+            >
+                <div class="infos__title bold">
+                    {{key}}
+                </div>
+                <div>
+                    {{value}}
+                </div>
+            </div>
+        </div>
+        <div class="infos__contact infos__section">
+            <div class="infos__title bold">
+                See it live
+            </div>
+            <div>
+                <a 
+                    :href="link"
+                >
+                   {{link}}
+                </a>
+                
+            </div>
+        </div>
+
+    </div>
+</template>
+
+<script>
+export default {
+    name: "infos",
+    props: {
+        commun: Object,
+        link: String
+    },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.infos {
+    width: 66%;
+    margin: 10vh 0 ;
+    padding:  7vh 0 7vh 10%;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    font-size: 1rem;
+    display: flex;
+    @media (max-width: 700px){
+        width: 100%;
+        flex-direction: column;
+
+    }    
+}
+.infos__info {
+    display: inline-block;
+    min-width: 100px;
+}
+.infos__contact {
+    width: 42%;
+    @media (max-width: 700px){
+        margin-bottom: 30px;
+    }    
+}
+.infos__social {
+    width: 57%;
+    @media (max-width: 700px){
+        width: 90%;
+    } 
+}
+.infos__title {
+    line-height: 1;
+    margin-bottom: 2vh;
+    @media (max-width: 700px){
+        margin-bottom: 5px;
+    }  
+}
+.infos__item {
+    line-height: 1;
+    margin-right: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    @media (max-width: 700px){
+        width: 50%;
+        margin-right: 0px;
+    } 
+}
+
+</style>

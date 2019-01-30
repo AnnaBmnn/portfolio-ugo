@@ -6,6 +6,7 @@
         v-bind:title="home.title"
         v-bind:description="home.description"
         v-bind:commun="commun"
+        v-bind:isSocials="true"
       />
       <CaseStudies
         v-bind:caseStudy="home.caseStudy"

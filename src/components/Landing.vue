@@ -11,14 +11,21 @@
             </div>
         </div>
         <socials
+            v-if="isSocials"
             v-bind:social="commun.social"
             v-bind:contact="commun.contact"
+        />
+        <Infos
+            v-else
+            v-bind:commun="commun"
+            v-bind:link="link"
         />
     </section>
 </template>
 
 <script>
 import Socials from "@/components/Socials.vue";
+import Infos from "@/components/Infos.vue";
 
 
 export default {
@@ -26,10 +33,13 @@ export default {
     props: {
         title: String,
         description: String,
-        commun: Object
+        commun: Object,
+        isSocials: Boolean,
+        link: String
     },
     components: {
-        Socials
+        Socials,
+        Infos,
     }
 };
 </script>
