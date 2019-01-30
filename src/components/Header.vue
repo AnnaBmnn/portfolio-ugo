@@ -2,7 +2,6 @@
   <header class="nav">
     <router-link class="nav__link bold nav__link--olsak" to="/"><span>Olsak.</span></router-link>
     <router-link class="nav__link nav__link--works" to="/about">Works</router-link>
-    <!-- <a href="./assets/pdf/BaumannAnnaStage.pdf" download="Ugo Olsak Resume" class="nav__link nav__link--resume" >Resume</a> -->
     <a href="../BaumannAnnaStage.pdf" target="_blank" class="nav__link nav__link--resume" >Resume</a>
   </header>
 </template>
