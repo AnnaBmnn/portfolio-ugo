@@ -58,8 +58,8 @@ export default {
     top: 83%;
     right: 60px;
     z-index: 1000;
-    // background-color: white;
-    // mix-blend-mode: difference;
+    mix-blend-mode: difference;
+
     img {
         position: absolute;
         top: 50%;
@@ -71,14 +71,14 @@ export default {
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 1px);
-        // mix-blend-mode: difference;
-
+        mix-blend-mode: difference;
+        
 
         circle {
             stroke-dasharray: 295;
             transform: rotateZ(-90deg);
             transform-origin: center;
-            // stroke: #FFF;
+            stroke: #FFF;
 
         }
     }
