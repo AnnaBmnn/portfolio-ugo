@@ -45,7 +45,7 @@ export default {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    font-weight: normal;
+    font-weight: 300;
     &:after {
         content: '';
         height: 1px;

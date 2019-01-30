@@ -25,7 +25,7 @@
             {{name}}
             <span class="project__numero">{{index}}</span>
         </h3>
-        <router-link :to="slug" class="project__link">View Case</router-link>
+        <router-link :to="`project/${slug}`" class="project__link">View Case</router-link>
 
         
     </div>

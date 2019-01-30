@@ -64,6 +64,10 @@ export default {
     &.light {
         background-color: white;
         color: #161616;
+        .copyClickLink__contact {
+            font-weight: normal;
+
+        }
         .smallSection__info {
             width: 40%;
         }
