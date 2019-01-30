@@ -10,6 +10,7 @@
       />
       <CaseStudies
         v-bind:caseStudy="home.caseStudy"
+        v-bind:index="1"
       />
       <SmallSection
         v-bind:surtitle="home.freelance.surtitle"
@@ -18,7 +19,7 @@
         v-bind:contact="home.freelance.contact"
         v-bind:instruction="home.freelance.instruction"
         v-bind:isFooter="false"
-
+        v-bind:index="2"
         theme="dark"
       />
     </div>  
@@ -39,6 +40,7 @@
       v-bind:contact="home.thanks.contact"
       v-bind:instruction="home.thanks.instruction"
       v-bind:isFooter="true"
+      v-bind:index="3"
       theme="light"
     />
   </div>

@@ -32,6 +32,7 @@
                     <CopyClickLink
                         v-bind:instruction="caseStudy.subSection.instruction"
                         v-bind:linkContent="caseStudy.subSection.contact"
+                        v-bind:index="index"
                     />
                 </div>
             </div>
@@ -46,7 +47,8 @@ import CopyClickLink from "@/components/CopyClickLink.vue";
 export default {
     name: "CaseStudies",
     props: {
-        caseStudy: Object
+        caseStudy: Object,
+        index: Number
     },
     components: {
         ProjectBloc,

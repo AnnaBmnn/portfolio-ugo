@@ -11,6 +11,7 @@
                 <CopyClickLink
                     v-bind:instruction="instruction"
                     v-bind:linkContent="contact"
+                    v-bind:index="index"
                 />
             </div>
             <BackToTopText v-if="isFooter" />
@@ -37,7 +38,8 @@ export default {
         theme: String,
         contact: String,
         instruction: String,
-        isFooter: Boolean
+        isFooter: Boolean,
+        index: Number
     }
 };
 </script>
@@ -47,6 +49,11 @@ export default {
 .dark {
     .copyClickLink__contact:after {
         background-color: white;
+    }
+}
+.smallSection {
+    .copyClickLink__index {
+        font-size: 0.7rem;
     }
 }
 </style>

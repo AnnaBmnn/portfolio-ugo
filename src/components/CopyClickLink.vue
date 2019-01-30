@@ -5,6 +5,7 @@
             @click="clickToCopy"
         >
             {{linkContent}}
+            <span class="copyClickLink__index">{{index}}</span>
         </span>
         <div class="copyClickLink__instruction" >
             {{stateInstruction}}
@@ -23,7 +24,8 @@ export default {
     },
     props: {
         instruction: String,
-        linkContent: String
+        linkContent: String,
+        index: Number
     },
     methods: {
         clickToCopy: function(){
@@ -58,6 +60,13 @@ export default {
     &:hover + .copyClickLink__instruction {
         opacity: 1;
     }
+}
+.copyClickLink__index {
+    line-height: 1;
+    font-size: 1rem;
+    position: absolute;
+    top: 5px;
+    right: -15px;
 }
 .copyClickLink__instruction {
     opacity: 0;

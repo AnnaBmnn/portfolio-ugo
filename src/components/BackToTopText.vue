@@ -3,7 +3,6 @@
         bottom="30px"
         right="40px"
         class="backToTop"
-        @click="goToTop"
     >
         back to top
     </back-to-top>
