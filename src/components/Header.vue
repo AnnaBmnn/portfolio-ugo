@@ -22,7 +22,6 @@ export default {
     z-index: 100;
     mix-blend-mode: difference;
     color: #FFF;
-
   }
   .nav__link--olsak {
     font-weight: 500;

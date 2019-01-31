@@ -1,5 +1,6 @@
 <template>
     <div class="socials">
+        <div class="socials__overlay"></div>
         <div class="socials__contact socials__section">
             <div class="socials__title bold">
                 Contact
@@ -51,11 +52,22 @@ export default {
     background-color: #FAFAFA;
     font-size: 1rem;
     display: flex;
+    position: relative;
     @media (max-width: 700px){
         width: 100%;
         flex-direction: column;
 
     }    
+}
+.socials__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 .socials__contact {
     width: 42%;
