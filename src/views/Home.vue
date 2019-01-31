@@ -42,7 +42,9 @@
           v-bind:description="home.experimentsBloc.description"
           v-bind:experimentsArray="home.experimentsBloc.experiments"
         />
+      </div>
       <SmallSection
+        class="is__fixed"
         v-bind:title="home.thanks.title"
         v-bind:description="home.thanks.text"
         v-bind:contact="home.thanks.contact"
@@ -52,7 +54,6 @@
         theme="light"
       />
     
-    </div>
   </div>
 </template>
 
@@ -136,5 +137,14 @@ export default {
 .bloc--2 {
   position: relative;
   z-index: 10;
+  margin-bottom: 80vh;
+}
+.is__fixed {
+  margin-top: 20vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
 }
 </style>
