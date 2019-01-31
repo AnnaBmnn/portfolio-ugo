@@ -58,7 +58,6 @@ export default {
                 const description = document.querySelector('.landing__txt');
                 const socialsOverlay = document.querySelector('.socials__overlay');
                 this.tl = new TimelineLite();
-                console.log(this.tl);
                 this.tl
                     .from(name, 0.6, {opacity: 0, transform: "translateY(15%)"}, "+=1")
                     .from(work, 0.6, {opacity: 0, transform: "translateY(15%)"})
