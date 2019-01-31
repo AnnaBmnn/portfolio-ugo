@@ -61,7 +61,7 @@ export default {
 <style scoped lang="scss">
 .casesStudies__container {
     margin: 0 auto;
-    padding: 10vh;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
 }

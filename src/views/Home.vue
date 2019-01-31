@@ -16,7 +16,8 @@
       />
     </div> 
       <SmallSection
-        class="bloc__fixed"
+        :style="{transform: 'translateY(-' + this.translateBlocY+ 'px)' }"
+        class="fixed"
         v-bind:surtitle="home.freelance.surtitle"
         v-bind:title="home.freelance.title"
         v-bind:description="home.freelance.description"
@@ -27,21 +28,21 @@
         theme="dark"
       /> 
 
-    <div class="scrollMagic__bloc--2">
-      <FaceBloc
-        class="bg__white"
-        v-bind:title="home.face.title"
-        v-bind:description="home.face.description"
-        v-bind:img="home.face.img"
-      />
-      <Experiments
-        v-bind:title="home.experimentsBloc.title"
-        v-bind:description="home.experimentsBloc.description"
-        v-bind:experimentsArray="home.experimentsBloc.experiments"
-      />
-  
+      <div 
+        class="bloc--2 "
+      >
+        <FaceBloc
+          class="bg__white"
+          v-bind:title="home.face.title"
+          v-bind:description="home.face.description"
+          v-bind:img="home.face.img"
+        />
+        <Experiments
+          v-bind:title="home.experimentsBloc.title"
+          v-bind:description="home.experimentsBloc.description"
+          v-bind:experimentsArray="home.experimentsBloc.experiments"
+        />
       <SmallSection
-        class="bg__white"
         v-bind:title="home.thanks.title"
         v-bind:description="home.thanks.text"
         v-bind:contact="home.thanks.contact"
@@ -50,6 +51,7 @@
         v-bind:index="3"
         theme="light"
       />
+    
     </div>
   </div>
 </template>
@@ -77,15 +79,39 @@ export default {
     Experiments,
     FaceBloc
   },
+  data() {
+      return {
+          scroll: 0,
+          translateBlocY: 0,
+      }
+  },
   props: {
     home: Object,
     commun: Object
   },
+  methods: {
+    handleScroll (e) {
+      const scroll = window.scrollY;
+
+      this.scroll= scroll;
+      const windowHeight = window.innerHeight;
+      const blocFixHeight = document.querySelector('.fixed').offsetHeight;
+      
+      const bloc1Height = document.querySelector('.bloc--1').offsetHeight;
+      const bloc2Scroll = document.querySelector('.bloc--2').offsetTop;
+      if (bloc2Scroll < (scroll + windowHeight)) {
+        let translate = scroll - bloc2Scroll + windowHeight;
+        this.translateBlocY = translate;
+      } else {
+        this.translateBlocY = 0;
+      }
+    }
+  },
   created () {
-    console.log("created");
-
-
-
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   mounted() {
 	  // init controller
@@ -96,20 +122,19 @@ export default {
 <style scoped lang="scss">
 .bloc--1 {
   margin-bottom: 80vh;
-  // box-sizing: border-box;
-  position: relative;
-  z-index: 20;
-
-}
-.scrollMagic__bloc--2 {
-  z-index: 20;
+  z-index: 10;
   position: relative;
 }
-.bloc__fixed {
+.fixed {
+  margin-top: 20vh;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
+  z-index: 5;
+}
+.bloc--2 {
+  position: relative;
   z-index: 10;
 }
 </style>
