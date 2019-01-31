@@ -60,7 +60,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .casesStudies__container {
-    margin: 10vh auto;
+    margin: 0 auto;
+    padding: 10vh;
     display: flex;
     flex-direction: column;
 }

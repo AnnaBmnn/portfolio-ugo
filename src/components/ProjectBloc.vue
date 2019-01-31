@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { TweenMax } from 'gsap'
+import { TweenMax } from 'gsap';
 import Forme from "@/components/Forme.vue";
 
 export default {
