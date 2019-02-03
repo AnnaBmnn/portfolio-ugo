@@ -96,15 +96,32 @@ export default {
 
       this.scroll= scroll;
       const windowHeight = window.innerHeight;
-      const blocFixHeight = document.querySelector('.fixed').offsetHeight;
+      const blocFix = document.querySelector('.fixed');
+      const blocFixHeight = blocFix.offsetHeight;
       
       const bloc1Height = document.querySelector('.bloc--1').offsetHeight;
       const bloc2Scroll = document.querySelector('.bloc--2').offsetTop;
+      const experimentBloc = document.querySelector('.experiments');
+      const experimentBlocTop = experimentBloc.offsetTop;
+
+      if(scroll > bloc1Height - windowHeight){
+        blocFix.classList.add('opacity');
+      } else {
+        blocFix.classList.remove('opacity');
+      }
       if (bloc2Scroll < (scroll + windowHeight)) {
         let translate = scroll - bloc2Scroll + windowHeight;
         this.translateBlocY = translate;
       } else {
         this.translateBlocY = 0;
+      }
+      console.log(experimentBlocTop+ bloc2Scroll - windowHeight*0.1);
+      console.log(scroll);
+      if( scroll > experimentBlocTop + bloc2Scroll - windowHeight*0.5 ){
+        console.log("after exp");
+        experimentBloc.classList.add("active");
+      } else {
+        experimentBloc.classList.remove("active");
       }
     }
   },
@@ -133,6 +150,11 @@ export default {
   left: 0;
   width: 100%;
   z-index: 5;
+  opacity: 0;
+
+  &.opacity {
+    opacity: 1;
+  }
 }
 .bloc--2 {
   position: relative;

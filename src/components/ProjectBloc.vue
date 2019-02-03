@@ -184,6 +184,7 @@ export default {
     left: -10vw;
     top: -50px;
     z-index: 1;
+    transform: scale(4) translateY(50%);
 }
 
 </style>
