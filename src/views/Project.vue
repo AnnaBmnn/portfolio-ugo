@@ -11,7 +11,6 @@
                 context: projectInfos.context
             }"
         />
-    {{projectInfos}}
         <div class="container">
             <div 
                 v-for="(value, key, index) in projectInfos.imgs"

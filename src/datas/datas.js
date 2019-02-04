@@ -12,8 +12,8 @@ const datas = {
                     context: "Freelance",
                     name: "La Débraillée",
                     slug: "la-debraillee",
-                    img: "~assets/img/project.png",
-                    forme: ""
+                    img: "../img/project.png",
+                    forme: "../img/projectForm.svg"
                 },
                 {
                     year: "2018",
@@ -21,8 +21,8 @@ const datas = {
                     context: "Freelance",
                     name: "Azzaro",
                     slug: "azzaro",
-                    img: "~assets/img/project.png",
-                    forme: "@/assets/img/projectForm.svg"
+                    img: "../img/project.png",
+                    forme: "../img/projectForm.svg"
                 },
                 {
                     year: "2018",
@@ -30,8 +30,8 @@ const datas = {
                     context: "Freelance",
                     name: "Eiffage Galaxy",
                     slug: "eiffage-galaxy",
-                    img: "~assets/img/project.png",
-                    forme: "@/assets/img/projectForm.svg"
+                    img: "../img/project.png",
+                    forme: "../img/projectForm.svg"
                 },
             ],
             subSection: {
@@ -59,17 +59,17 @@ const datas = {
             description: "Since i’m still a student I like learning (always wil) and trying stuff. Here is a quick selection of some of my experiments so far. ",
             experiments: [
                 {
-                    img: "",
+                    img: "../img/project.png",
                     date: "12.01.2018",
                     credit: "PAN/JIN dribbble shot"
                 },
                 {
-                    img: "",
+                    img: "../img/project.png",
                     date: "18.02.2018",
                     credit: "Hannah in the house - Urban jungle bloggers"
                 },
                 {
-                    img: "",
+                    img: "../img/project.png",
                     date: "25.01.2018",
                     credit: "Monia Merlo - Philosophical beauty"
                 }

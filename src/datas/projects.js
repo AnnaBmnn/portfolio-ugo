@@ -8,12 +8,12 @@ const projects = [
         link: "google.com",
         description: "La Débraillée is an Italian brand of leather goods founded in 2015, from a vision of Alice Rosignoli. The brand’s creations are made in a small, artisan, family-run handbag factory located in central Italy.",
         imgs: [
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png"
         ],
-        forme: ""
+        forme: "../img/projectForm.svg"
     },
     {
         year: "2018",
@@ -24,12 +24,12 @@ const projects = [
         link: "google.com",
         description: "La Débraillée is an Italian brand of leather goods founded in 2015, from a vision of Alice Rosignoli. The brand’s creations are made in a small, artisan, family-run handbag factory located in central Italy.",
         imgs: [
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png"
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png"
         ],
-        forme: "@/assets/img/projectForm.svg"
+        forme: "../img/projectForm.svg"
     },
     {
         year: "2018",
@@ -40,12 +40,12 @@ const projects = [
         link: "google.com",
         description: "La Débraillée is an Italian brand of leather goods founded in 2015, from a vision of Alice Rosignoli. The brand’s creations are made in a small, artisan, family-run handbag factory located in central Italy.",
         imgs: [
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png"
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png"
         ],
-        forme: "@/assets/img/projectForm.svg"
+        forme: "../img/projectForm.svg"
     },    
     {
         year: "2018",
@@ -56,10 +56,10 @@ const projects = [
         link: "google.com",
         description: "La Débraillée is an Italian brand of leather goods founded in 2015, from a vision of Alice Rosignoli. The brand’s creations are made in a small, artisan, family-run handbag factory located in central Italy.",
         imgs: [
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png"
         ],
         forme: ""
     },
@@ -72,12 +72,12 @@ const projects = [
         link: "google.com",
         description: "La Débraillée is an Italian brand of leather goods founded in 2015, from a vision of Alice Rosignoli. The brand’s creations are made in a small, artisan, family-run handbag factory located in central Italy.",
         imgs: [
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png"
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png"
         ],
-        forme: "@/assets/img/projectForm.svg"
+        forme: "../img/projectForm.svg"
     },
     {
         year: "2018",
@@ -88,12 +88,12 @@ const projects = [
         link: "google.com",
         description: "La Débraillée is an Italian brand of leather goods founded in 2015, from a vision of Alice Rosignoli. The brand’s creations are made in a small, artisan, family-run handbag factory located in central Italy.",
         imgs: [
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png",
-            "~assets/img/project.png"
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png",
+            "../img/project.png"
         ],
-        forme: "@/assets/img/projectForm.svg"
+        forme: "../img/projectForm.svg"
     },    
 ]
 

@@ -4,7 +4,7 @@
         @mouseover="mouseOver"
         @mouseleave="mouseLeave"
     >
-        <img class="project__img"  src="../assets/img/project.png">
+        <img class="project__img"  :src="img">
         <forme ref="turbForm" class="project__form" />
         <span class="project__date">{{year}}</span>
         <div class="project__infos">

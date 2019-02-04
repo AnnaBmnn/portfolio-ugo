@@ -21,6 +21,7 @@
             <div v-if="projectHover" class="container__img"
             >
                 {{projectHover.name}}
+                {{projectHover.imgs[0]}}
                 <img
                     :src="projectHover.imgs[0]"
                 />
