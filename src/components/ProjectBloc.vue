@@ -52,11 +52,9 @@ export default {
     },
     methods: {
         mouseOver: function(){
-            console.log("hover");
-            const forme = this.$refs.turbForm ;
+            const forme = document.querySelector("#turbwave");
             console.log(forme);
-            TweenMax.to("#turbwave", 2, {
-                // attr:{"fill":"#000000"},
+            TweenMax.to(forme, 2, {
                 attr:{"baseFrequency":0.01},
                 repeat:-1,
                 yoyo:true
