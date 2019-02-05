@@ -43,7 +43,7 @@ export default {
     padding: 15vh 0;
     background-color: white;
     color: white;
-    transition: background-color 0.1s ease-in;
+    transition: background-color 1s ease-in-out;
     .emoji {
         opacity: 0;
         transition: opacity 0.1s ease-in;

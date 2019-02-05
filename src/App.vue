@@ -26,7 +26,7 @@ export default {
       social: {
         twitter: "twitter.fr",
         behance: "behance.com",
-        dribble: "dribble.com",
+        dribbble: "dribbble.com",
         linkedin: "linkedin.fr"
       }
     }
@@ -82,6 +82,7 @@ li {
 a {
   color: black;
   text-decoration: none;
+  text-transform: capitalize;
   &:visited {
     color: black;
   }

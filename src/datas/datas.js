@@ -85,10 +85,10 @@ const datas = {
     commun: {
         contact: "olsak.ugo@gmail.com",
         social: {
-            twitter: "twitter.fr",
-            behance: "behance.com",
-            dribble: "dribble.com",
-            linkedin: "linkedin.fr"
+            twitter: "https://twitter.com/ugoolsak",
+            behance: "https://www.behance.net/ugoolsak",
+            dribbble: "https://dribbble.com/UgoOlsak",
+            linkedin: "https://www.linkedin.com/in/ugoolsak/"
         },
         
     },

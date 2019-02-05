@@ -44,7 +44,7 @@
         />
       </div>
       <SmallSection
-        class="is__fixed"
+        class="is__fixed bloc__smaller"
         v-bind:title="home.thanks.title"
         v-bind:description="home.thanks.text"
         v-bind:contact="home.thanks.contact"
@@ -115,10 +115,7 @@ export default {
       } else {
         this.translateBlocY = 0;
       }
-      console.log(experimentBlocTop+ bloc2Scroll - windowHeight*0.1);
-      console.log(scroll);
       if( scroll > experimentBlocTop + bloc2Scroll - windowHeight*0.5 ){
-        console.log("after exp");
         experimentBloc.classList.add("active");
       } else {
         experimentBloc.classList.remove("active");
@@ -159,7 +156,7 @@ export default {
 .bloc--2 {
   position: relative;
   z-index: 10;
-  margin-bottom: 80vh;
+  margin-bottom: 60vh;
 }
 .is__fixed {
   margin-top: 20vh;
@@ -168,5 +165,9 @@ export default {
   left: 0;
   width: 100%;
   z-index: 4;
+}
+.bloc__smaller {
+  height: 60vh;
+  margin-top: 40vh;
 }
 </style>
