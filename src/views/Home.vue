@@ -2,31 +2,38 @@
   <div class="home">
     <ArrowFill />
     <div class="bloc--1">
-      <Landing
-        class="bg__white"
-        v-bind:title="home.title"
-        v-bind:description="home.description"
-        v-bind:commun="commun"
-        v-bind:isSocials="true"
-      />
-      <CaseStudies
-        class="bg__white"
-        v-bind:caseStudy="home.caseStudy"
-        v-bind:index="1"
-      />
+      <keep-alive>
+        <Landing
+          class="bg__white"
+          v-bind:title="home.title"
+          v-bind:description="home.description"
+          v-bind:commun="commun"
+          v-bind:isSocials="true"
+        />
+      </keep-alive>
+
+      <keep-alive>
+        <CaseStudies
+          class="bg__white"
+          v-bind:caseStudy="home.caseStudy"
+          v-bind:index="1"
+        />
+      </keep-alive>
     </div> 
-      <SmallSection
-        :style="{transform: 'translateY(-' + this.translateBlocY+ 'px)' }"
-        class="fixed"
-        v-bind:surtitle="home.freelance.surtitle"
-        v-bind:title="home.freelance.title"
-        v-bind:description="home.freelance.description"
-        v-bind:contact="home.freelance.contact"
-        v-bind:instruction="home.freelance.instruction"
-        v-bind:isFooter="false"
-        v-bind:index="2"
-        theme="dark"
-      /> 
+      <keep-alive>
+        <SmallSection
+          :style="{transform: 'translateY(-' + this.translateBlocY+ 'px)' }"
+          class="fixed"
+          v-bind:surtitle="home.freelance.surtitle"
+          v-bind:title="home.freelance.title"
+          v-bind:description="home.freelance.description"
+          v-bind:contact="home.freelance.contact"
+          v-bind:instruction="home.freelance.instruction"
+          v-bind:isFooter="false"
+          v-bind:index="2"
+          theme="dark"
+        /> 
+      </keep-alive>
 
       <div 
         class="bloc--2 "
@@ -101,11 +108,19 @@ export default {
       
       const bloc1Height = document.querySelector('.bloc--1').offsetHeight;
       const bloc2Scroll = document.querySelector('.bloc--2').offsetTop;
+      const bloc2Height = document.querySelector('.bloc--2').offsetHeight;
+      const lastBlocFixed = document.querySelector('.bloc__smaller');
+      const lastBlocFixedTop = lastBlocFixed.offsetTop;
 
       if(scroll > bloc1Height - windowHeight){
         blocFix.classList.add('opacity');
       } else {
         blocFix.classList.remove('opacity');
+      }
+      if(scroll > bloc1Height + bloc2Height - windowHeight){
+        lastBlocFixed.classList.add('opacity');
+      } else {
+        lastBlocFixed.classList.remove('opacity');
       }
       if (bloc2Scroll < (scroll + windowHeight)) {
         let translate = scroll - bloc2Scroll + windowHeight;
@@ -162,5 +177,9 @@ export default {
 .bloc__smaller {
   height: 60vh;
   margin-top: 40vh;
+  opacity: 0;
+  &.opacity {
+    opacity: 1;
+  }
 }
 </style>
