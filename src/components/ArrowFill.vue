@@ -82,6 +82,9 @@ export default {
 
         }
     }
+    @media (max-width: 850px){
+        display: none;
+    }
 }
 
 </style>

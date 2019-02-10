@@ -1,13 +1,20 @@
 <template>
-    <div class="experiment">
-        <img class="experiment__img" src="../assets/img/experiment.png">
+    <a :href="link" class="experiment" target="_blank">
+        <div class="experiment__imgContainer">
+            <img 
+                class="experiment__img" 
+                :src="imgs[0]"
+                :srcset="`${imgs[0]} 800w,
+                    ${imgs[1]} 400w`"
+            >
+        </div>
         <div class="experiment__infos">
             {{date}}
             <div class="bold">
                 {{credit}}
             </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <script>
@@ -17,7 +24,8 @@ export default {
     props: {
         date: String,
         credit: String,
-        img: String
+        imgs: Array,
+        link: String
     }
 };
 </script>
@@ -28,11 +36,24 @@ export default {
     margin: 15vh 0;
     width: 70%;
     position: relative;
-
-    img {
+    .experiment__imgContainer {
         width: 100%;
+        overflow: hidden;
         height: auto;
+        &:hover {
+            img {
+                transform: scale(1.02);
+            }
+        }
+        img {
+            width: 100%;
+            height: auto;
+            will-change: transform;
+            transition: transform 0.3s ease-in-out;
+            transform: scale(1);
+        }
     }
+
     &:nth-child(even){
         align-self: flex-end;
     }

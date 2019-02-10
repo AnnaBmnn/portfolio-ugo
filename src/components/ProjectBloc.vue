@@ -1,11 +1,11 @@
 <template>
-    <div 
+    <router-link 
         class="project" 
-        @mouseover="mouseOver"
-        @mouseleave="mouseLeave"
-    >
+        :to="`project/${slug}`"
+    >  
+        <div class="project__imgContainer">
         <img class="project__img"  :src="img">
-        <forme ref="turbForm" class="project__form" />
+        </div>
         <span class="project__date">{{year}}</span>
         <div class="project__infos">
             <div class="project__info">
@@ -28,12 +28,11 @@
         <router-link :to="`project/${slug}`" class="project__link">View Case</router-link>
 
         
-    </div>
+    </router-link >
 </template>
 
 <script>
 import { TweenMax } from 'gsap';
-import Forme from "@/components/Forme.vue";
 
 export default {
     name: "ProjectBloc",
@@ -41,35 +40,15 @@ export default {
         name: String,
         slug: String,
         img: String,
-        forme: String,
         year: String,
         role: String,
         context: String,
         index: Number
     },
     components: {
-        Forme
     },
     methods: {
-        mouseOver: function(){
-            const forme = document.querySelector("#turbwave");
-            console.log(forme);
-            TweenMax.to(forme, 2, {
-                attr:{"baseFrequency":0.01},
-                repeat:-1,
-                yoyo:true
-            });
-        },
-        mouseLeave: function(){
-            console.log("moouse out")
-            
-        },
-        mounted() { 
-            const { box } = this.$refs
-            const timeline = new TimelineLite() 
-            
-            timeline.to(box, 1, { x: 200, rotation: 90 }) 
-        } 
+
     }
 
 };
@@ -82,11 +61,25 @@ export default {
     width: 480px;
     margin: 15vh 0;
     position: relative;
+    .project__imgContainer {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        &:hover {
+            .project__img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+
     .project__img {
         position: relative;
         object-fit: cover;
         z-index: 2;
-
+        will-change: transform;
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1);
     }
     &:nth-child(odd){
         align-self: flex-end;

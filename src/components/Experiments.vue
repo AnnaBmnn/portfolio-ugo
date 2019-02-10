@@ -12,9 +12,10 @@
                 <experiment
                     v-for="(value) in experimentsArray"
                     :key="value.slug"
-                    :img="value.img"
+                    :imgs="value.imgs"
                     :date="value.date"
                     :credit="value.credit"
+                    :link="value.link"
                  />
             </div>
         </div>
@@ -41,20 +42,9 @@ export default {
 <style scoped lang="scss">
 .experiments {
     padding: 15vh 0;
-    background-color: white;
+    background-color: #161616;
     color: white;
-    transition: background-color 1s ease-in-out;
-    .emoji {
-        opacity: 0;
-        transition: opacity 0.1s ease-in;
 
-    }
-    &.active {
-        background-color: #161616;
-        .emoji {
-            opacity: 1;
-        }
-    }
     .title {
         @media (max-width: 700px){
             font-size: 1.75rem;

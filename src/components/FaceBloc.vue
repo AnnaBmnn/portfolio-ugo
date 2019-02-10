@@ -12,14 +12,6 @@
                 {{description}}
             </div> 
         </div>
-        <ul class="faceBloc__controls">
-            <li>
-                <a class=" faceBloc__control">Natural</a>
-            </li>
-            <li>
-                <a class="active faceBloc__control">Corporate</a>
-            </li>            
-        </ul>
     </div>
 </template>
 
@@ -103,41 +95,5 @@ export default {
         margin: 20px 0 30px;
     }
 }
-.faceBloc__controls {
-    position: absolute;
-    right: 10%;
-    bottom: 30px;
-    li {
-        margin-left: 30px;
-        display: inline-block;
-        a {
-            font-weight: 200;
-            position: relative;
-        }
-    }
 
-    a.active {
-        font-weight: normal;
-        &:after {
-            content: '';
-            height: 1px;
-            width: calc(100%);
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: black;
-        }
-    }
-    @media (max-width: 700px){
-        position: unset;
-        order: 2;
-        width: 90%;
-        text-align: right;
-        margin-bottom: 50px;
-        li {
-            margin-left: 40px;
-        }
-
-    }
-}
 </style>

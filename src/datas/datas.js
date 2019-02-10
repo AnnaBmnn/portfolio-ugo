@@ -59,19 +59,31 @@ const datas = {
             description: "Since i’m still a student I like learning (always wil) and trying stuff. Here is a quick selection of some of my experiments so far. ",
             experiments: [
                 {
-                    img: "../img/project.png",
-                    date: "12.01.2018",
-                    credit: "PAN/JIN dribbble shot"
+                    imgs: [
+                        "../img/experiments/panjin.png",
+                        "../img/experiments/panjin@0,5x.png"
+                    ],
+                    date: "08.11.2018",
+                    credit: "PAN/JIN dribbble shot",
+                    link: "https://dribbble.com/shots/5583031-PAN-JIN-shot-preview"
                 },
                 {
-                    img: "../img/project.png",
+                    imgs: [
+                        "../img/experiments/urbanjungle.png",
+                        "../img/experiments/urbanjungle@0,5x.png"
+                    ],
                     date: "18.02.2018",
-                    credit: "Hannah in the house - Urban jungle bloggers"
+                    credit: "Hannah in the house - Urban jungle bloggers",
+                    link: "https://dribbble.com/shots/4238966-Hannah-in-the-house-Urban-jungle-bloggers"
                 },
                 {
-                    img: "../img/project.png",
+                    imgs: [
+                        "../img/experiments/moniamerlot.png",
+                        "../img/experiments/moniamerlot@0,5x.png"
+                    ],
                     date: "25.01.2018",
-                    credit: "Monia Merlo - Philosophical beauty"
+                    credit: "Monia Merlo - Philosophical beauty",
+                    link: "https://dribbble.com/shots/4150613-Monia-Merlo-Philosophical-beauty"
                 }
             ]
         },

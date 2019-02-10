@@ -101,8 +101,6 @@ export default {
       
       const bloc1Height = document.querySelector('.bloc--1').offsetHeight;
       const bloc2Scroll = document.querySelector('.bloc--2').offsetTop;
-      const experimentBloc = document.querySelector('.experiments');
-      const experimentBlocTop = experimentBloc.offsetTop;
 
       if(scroll > bloc1Height - windowHeight){
         blocFix.classList.add('opacity');
@@ -114,11 +112,6 @@ export default {
         this.translateBlocY = translate;
       } else {
         this.translateBlocY = 0;
-      }
-      if( scroll > experimentBlocTop + bloc2Scroll - windowHeight*0.5 ){
-        experimentBloc.classList.add("active");
-      } else {
-        experimentBloc.classList.remove("active");
       }
     }
   },
