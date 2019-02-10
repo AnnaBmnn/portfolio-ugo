@@ -1,7 +1,6 @@
 <template>
     <div class="project">
         <ArrowFill />
-        HELLOOOOOOOOO
         <Landing
             v-bind:title="`${projectInfos.name}`"
             v-bind:description="projectInfos.description"
@@ -167,11 +166,16 @@
                 <img :src="projectInfos.imgs[15][0]">
             </div>
         </div>
+        <NextProject
+            :index="projectInfos.index"
+        />
+        
     </div>
 </template>
 
 <script>
 import ArrowFill from "@/components/ArrowFill.vue";
+import NextProject from "@/components/NextProject.vue";
 import Landing from "@/components/Landing.vue";
 import { projects } from "../datas/projects.js";
 
@@ -179,19 +183,22 @@ export default {
   name: "projectTesla",
   components: {
     ArrowFill,
-    Landing
+    Landing,
+    NextProject
   },
   data: function(){
     return {
-      projectInfos: projects.find((project)=>{
-        return project.slug == "tesla-x-tripadvisor";
-    })
+        projectInfos: projects.find((project)=>{
+            return project.slug == "tesla-x-tripadvisor";
+        }
+    )
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
+
 .project {
     position: relative;
     img {
@@ -207,12 +214,18 @@ export default {
     width: 90%;
     margin: 0 auto;
     padding: 17vh 0 19vh;
+    @media (max-width: 900px){
+        width: 100%;
+    }
 }
 .project__surtitle {
     font-family: 'Graphik', sans-serif;
     font-size: 1rem;
     font-weight: normal;
     margin-bottom: 30px;
+    @media (max-width: 900px){
+        margin-bottom: 20px;
+    }
 }
 .project__bold {
     font-weight: normal;
@@ -223,5 +236,10 @@ export default {
     letter-spacing: 0.18rem;
     line-height: 3.75rem;
     font-weight: 300;
+    @media (max-width: 900px){
+        font-size: 2rem;
+        letter-spacing: 0.10rem;
+        line-height: 2.5rem;
+    }
 }
 </style>

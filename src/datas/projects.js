@@ -1,6 +1,6 @@
 const projects = [
     {
-        index: "1",
+        index: 1,
         year: "2018",
         role: "UX/UI",
         context: "Freelance",
@@ -30,7 +30,7 @@ const projects = [
         ],
     },
     {
-        index: "2",
+        index: 2,
         year: "2018",
         role: "UX/UI",
         context: "Freelance",
@@ -50,7 +50,7 @@ const projects = [
         forme: "../img/projectForm.svg"
     },
     {
-        index: "3",
+        index: 3,
         year: "2018",
         role: "UX/UI",
         context: "Freelance",

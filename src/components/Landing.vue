@@ -41,7 +41,7 @@ export default {
         link: String,
         siteLink: String,
         emoji: String,
-        index: String
+        index: Number
     },
     data() {
         return {

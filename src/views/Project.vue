@@ -25,6 +25,9 @@
                 <img :src="value[0]">
             </div>
         </div>
+        <NextProject
+            :index="(projectInfos.index)%3"
+        />
     </div>
 </template>
 
@@ -32,12 +35,15 @@
 import ArrowFill from "@/components/ArrowFill.vue";
 import Landing from "@/components/Landing.vue";
 import { projects } from "../datas/projects.js";
+import NextProject from "@/components/NextProject.vue";
+
 
 export default {
   name: "project",
   components: {
     ArrowFill,
-    Landing
+    Landing,
+    NextProject
   },
   data: function(){
     return {
