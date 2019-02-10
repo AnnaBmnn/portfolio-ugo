@@ -14,7 +14,7 @@
     <project-bloc
         v-for="(value, index) in caseStudy.cases"
         :key="value.slug"
-        :img="value.img"
+        :imgs="value.imgs"
         :name="value.name"
         :slug="value.slug"
         :forme="value.forme"

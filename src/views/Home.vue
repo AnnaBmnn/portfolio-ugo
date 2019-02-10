@@ -9,6 +9,7 @@
           v-bind:description="home.description"
           v-bind:commun="commun"
           v-bind:isSocials="true"
+          emoji="../img/home/sun-emoji.svg"
         />
       </keep-alive>
 
@@ -66,9 +67,6 @@
 
 <script>
 // @ is an alias to /src
-// import {ScrollMagic} from 'scrollmagic';
-// import { TimelineMax } from 'gsap';
-// import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js';
 import ArrowFill from "@/components/ArrowFill.vue";
 import Landing from "@/components/Landing.vue";
 import CaseStudies from "@/components/CaseStudies.vue";

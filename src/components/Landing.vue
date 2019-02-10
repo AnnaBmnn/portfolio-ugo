@@ -4,7 +4,8 @@
             <div class="landing__container">
                 <h1 class="title">
                     {{title}}
-                    <img src="../assets/img/sun-emoji.svg">
+                    <span v-if="index"> - 00{{index}}</span>
+                    <img :src="emoji"/>
                 </h1>
                 <div class="landing__txt" v-html="description">
                 </div>  
@@ -19,6 +20,7 @@
             v-else
             v-bind:commun="commun"
             v-bind:link="link"
+            v-bind:siteLink="siteLink"
         />
     </section>
 </template>
@@ -36,7 +38,10 @@ export default {
         description: String,
         commun: Object,
         isSocials: Boolean,
-        link: String
+        link: String,
+        siteLink: String,
+        emoji: String,
+        index: String
     },
     data() {
         return {
@@ -109,7 +114,10 @@ export default {
     }
     @media (max-width: 700px){
         font-size: 2.4rem;
-
+    }
+    img {
+        margin-left: 20px;
+        width: auto;
     }
 }
 </style>

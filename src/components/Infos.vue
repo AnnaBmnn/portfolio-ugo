@@ -14,15 +14,16 @@
                 </div>
             </div>
         </div>
-        <div class="infos__contact infos__section">
+        <div class="infos__contact infos__section" v-if="link !== 'false' ">
             <div class="infos__title bold">
                 See it live
             </div>
             <div>
-                <a 
+                <a
+                    target="_blank" 
                     :href="link"
                 >
-                   {{link}}
+                   {{siteLink}}
                 </a>
                 
             </div>
@@ -36,7 +37,8 @@ export default {
     name: "infos",
     props: {
         commun: Object,
-        link: String
+        link: String,
+        siteLink: String
     },
 };
 </script>

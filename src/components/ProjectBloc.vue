@@ -4,7 +4,15 @@
         :to="`project/${slug}`"
     >  
         <div class="project__imgContainer">
-        <img class="project__img"  :src="img">
+        <img 
+            class="project__img"  
+            :src="imgs[0]"
+            :srcset="`
+                ${imgs[0]} 480w,
+                ${imgs[1]} 2x,
+                ${imgs[2]} 500w,
+                `"
+        >
         </div>
         <span class="project__date">{{year}}</span>
         <div class="project__infos">
@@ -39,7 +47,7 @@ export default {
     props: {
         name: String,
         slug: String,
-        img: String,
+        imgs: Array,
         year: String,
         role: String,
         context: String,
@@ -104,6 +112,7 @@ export default {
     color: white;
     margin: 0;
     z-index: 2;
+    text-align: right;
     @media (max-width: 700px){
         font-size: 2.2rem;
     }

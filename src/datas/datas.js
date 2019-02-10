@@ -10,29 +10,46 @@ const datas = {
                     year: "2018",
                     role: "UX/UI",
                     context: "Freelance",
+                    name: "Tesla X TripAdvisor",
+                    slug: "tesla-x-tripadvisor",
+                    emojis: [
+                        "../img/projects/tesla/emoji.png",
+                        "../img/projects/tesla/emoji@2x.png",
+                        "../img/projects/tesla/emoji@0,5x.png",
+                    ],
+                    imgs: [
+                        "../img/projects/tesla/tesla.png",
+                        "../img/projects/tesla/tesla@2x.png",
+                        "../img/projects/tesla/tesla@0,5x.png",
+                    ],
+                    forme: "../img/projectForm.svg"
+                },
+                {
+                    year: "2018",
+                    role: "UX/UI",
+                    context: "Freelance",
                     name: "La Débraillée",
                     slug: "la-debraillee",
-                    img: "../img/project.png",
+                    imgs: [
+                        "../img/projects/la-debraillee/la-debraillee.png",
+                        "../img/projects/la-debraillee/la-debraillee@2x.png",
+                        "../img/projects/la-debraillee/la-debraillee@3x.png",
+                    ],
                     forme: "../img/projectForm.svg"
                 },
                 {
                     year: "2018",
                     role: "UX/UI",
                     context: "Freelance",
-                    name: "Azzaro",
-                    slug: "azzaro",
-                    img: "../img/project.png",
+                    name: "Economy",
+                    slug: "economy",
+                    imgs: [
+                        "../img/projects/economy/economy.png",
+                        "../img/projects/economy/economy@2x.png",
+                        "../img/projects/economy/economy@3x.png",
+                    ],
                     forme: "../img/projectForm.svg"
-                },
-                {
-                    year: "2018",
-                    role: "UX/UI",
-                    context: "Freelance",
-                    name: "Eiffage Galaxy",
-                    slug: "eiffage-galaxy",
-                    img: "../img/project.png",
-                    forme: "../img/projectForm.svg"
-                },
+                }
             ],
             subSection: {
                 surtitle: "By the way",
