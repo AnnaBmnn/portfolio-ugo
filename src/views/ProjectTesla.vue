@@ -222,10 +222,7 @@ export default {
     font-family: 'Graphik', sans-serif;
     font-size: 1rem;
     font-weight: normal;
-    margin-bottom: 30px;
-    @media (max-width: 900px){
-        margin-bottom: 20px;
-    }
+    letter-spacing: 0.075rem;
 }
 .project__bold {
     font-weight: normal;

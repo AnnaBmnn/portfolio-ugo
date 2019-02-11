@@ -9,7 +9,6 @@
         <span lass="caseStudies__description">
             {{caseStudy.description}}
         </span>
-        <router-link class="caseStudies__link" to="/about">View all projects</router-link>
       </div>
     <project-bloc
         v-for="(value, index) in caseStudy.cases"

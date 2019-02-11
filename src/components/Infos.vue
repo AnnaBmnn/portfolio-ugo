@@ -76,6 +76,7 @@ export default {
     } 
 }
 .infos__title {
+    text-transform: capitalize;
     line-height: 1;
     margin-bottom: 2vh;
     @media (max-width: 700px){

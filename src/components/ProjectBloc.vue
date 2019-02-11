@@ -75,7 +75,7 @@ export default {
         width: 100%;
         &:hover {
             .project__img {
-                transform: scale(1.1);
+                transform: scale(1.08);
             }
         }
     }
@@ -86,7 +86,8 @@ export default {
         object-fit: cover;
         z-index: 2;
         will-change: transform;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 1.8s ease-in-out;
+        // transition: transform 1.8s cubic-bezier(0.075, 0.82, 0.165, 1);
         transform: scale(1);
     }
     &:nth-child(odd){

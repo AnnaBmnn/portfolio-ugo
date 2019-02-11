@@ -23,6 +23,7 @@
                 >
                     <a 
                         :href="value"
+                        target="_blank"
                     >
                         {{key}}
                     </a>
@@ -67,6 +68,7 @@ export default {
     width: 100%;
     height: 100%;
     transform: scaleX(0);
+    z-index: 2;
     transform-origin: right;
 }
 .socials__contact {
@@ -93,6 +95,28 @@ export default {
     margin-right: 40px;
     display: inline-block;
     box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+
+    &:after {
+        transform-origin: right;
+        content: '';
+        background-color: black;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: scaleX(0);
+        transition: 0.2s ease-in transform;
+    }
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: left;
+
+        }
+    }
     @media (max-width: 700px){
         width: 50%;
         margin-right: 0px;
