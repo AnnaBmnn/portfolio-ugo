@@ -15,7 +15,7 @@
                 />
             </div>
             <BackToTopText v-if="isFooter" />
-            <div v-if="isFooter" class="smallSection__credits">Credits @2018-2019</div>
+            <div v-if="isFooter" class="smallSection__credits">Credits @2018-2019 <span class="developed"> Developed by <a href="https://annabaumann.fr/" target="_blank" class="bold" >Anna Baumann</a><img src="../assets/img/dolphin.png"></span></div>
         </div>
     </section>
 </template>
@@ -118,12 +118,32 @@ export default {
 
 }
 .smallSection__credits {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,1);
     line-height: 1;
     letter-spacing: 1.35px;
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+}
+.developed {
+    position: relative;
+    margin-left: 20px;
+    img {
+        margin-left: 8px;
+        width: 20px;
+        height: auto;
+    }
+    &:before {
+        content: "";
+        border-radius: 50%;
+        height: 5px;
+        width: 5px;
+        background-color: black;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 </style>

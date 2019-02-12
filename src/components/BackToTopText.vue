@@ -3,6 +3,7 @@
         bottom="30px"
         right="40px"
         class="backToTop"
+        duration="10"
     >
         back to top
     </back-to-top>

@@ -9,6 +9,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import { TimelineLite } from 'gsap';
 
 export default {
   name: "app",
@@ -29,8 +30,31 @@ export default {
         behance: "behance.com",
         dribbble: "dribbble.com",
         linkedin: "linkedin.fr"
-      }
+      },
+      tl: "",
     }
+  },
+  mounted() {
+    // this.$nextTick(() => {
+    console.log("mounted")
+      const socialsOverlay = document.querySelector('.socials__overlay');
+    
+    if(socialsOverlay){
+      const name = document.querySelector('.nav__link--olsak');
+      const resume = document.querySelector('.nav__link--resume');
+      const title = document.querySelector('.title');
+      const description = document.querySelector('.landing__txt');
+      const socialsOverlay = document.querySelector('.socials__overlay');
+      this.tl = new TimelineLite();
+      this.tl
+          .from(name, 0.6, {opacity: 0, transform: "translateY(15%)"}, "+=1")
+          .from(resume, 0.5, {opacity: 0, transform: "translateY(15%)"})
+          .from(title, 0.5, {opacity: 0, transform: "translateY(15%)"})
+          .from(description, 0.5, {opacity: 0, transform: "translateY(5%)"})
+          .from(socialsOverlay, 0.6, {transform: "scaleX(1)"})
+          .play();
+    }
+      // })
   }
 }
 </script>

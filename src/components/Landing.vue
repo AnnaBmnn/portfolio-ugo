@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import { TimelineLite } from 'gsap';
 import Socials from "@/components/Socials.vue";
 import Infos from "@/components/Infos.vue";
 
@@ -51,26 +50,6 @@ export default {
     components: {
         Socials,
         Infos,
-    },
-    mounted() {
-        // this.$nextTick(() => {
-            console.log("mounted")
-            if(this.isSocials){
-                const name = document.querySelector('.nav__link--olsak');
-                const resume = document.querySelector('.nav__link--resume');
-                const title = document.querySelector('.title');
-                const description = document.querySelector('.landing__txt');
-                const socialsOverlay = document.querySelector('.socials__overlay');
-                this.tl = new TimelineLite();
-                this.tl
-                    .from(name, 0.6, {opacity: 0, transform: "translateY(15%)"}, "+=1")
-                    .from(resume, 0.5, {opacity: 0, transform: "translateY(15%)"})
-                    .from(title, 0.5, {opacity: 0, transform: "translateY(15%)"})
-                    .from(description, 0.5, {opacity: 0, transform: "translateY(5%)"})
-                    .from(socialsOverlay, 0.6, {transform: "scaleX(1)"})
-                    .play();
-            }
-        // })
     }
 };
 </script>
