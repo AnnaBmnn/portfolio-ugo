@@ -42,14 +42,15 @@ export default {
         height: auto;
         &:hover {
             img {
-                transform: scale(1.02);
+                transform: scale(1.08);
             }
         }
         img {
             width: 100%;
             height: auto;
             will-change: transform;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 1.8s ease-in-out;
+
             transform: scale(1);
         }
     }

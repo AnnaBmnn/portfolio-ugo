@@ -206,7 +206,7 @@ export default {
         height: auto;
     }
     .container__img {
-        margin-bottom: 30px;
+        margin-bottom: 80px;
     }
 }
 
