@@ -7,7 +7,7 @@ const projects = [
         name: "Tesla X TripAdvisor",
         slug: "tesla-x-tripadvisor",
         link: "false",
-        description: "Tesla and Tripadvisor are two amazing products that offers you an amazing travling experience. <br> What if we match both of them in a single and unique product ?",
+        description: "Tesla and Tripadvisor are two amazing products that offer you a great traveling experience. <br>What if we match both of them in a single and unique product ?",
         emoji: "../img/projects/tesla/emoji.svg",
         siteLink: "false",
         imgs: [

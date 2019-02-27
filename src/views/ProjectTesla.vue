@@ -20,10 +20,9 @@
             <div class="project__txtContainer">
                 <div class="project__surtitle">Reflexion</div>
                 <div class="project__txt">
-                    After a few user interview, we point out many pain 
-                    points that appeared during their car trip. <br> We then came 
-                    with a question : 
-                    <div class="project__bold">How to transform a boring ordinary trip to a meaningful and fun one that you and your passenger will remember ?</div>
+                    After a few user interviews, we identified many pain points that appeared during their car trip. 
+                    <br>We then came with a question :
+                    <div class="project__bold">How to transform a boring, ordinary trip to a meaningful and fun one that you and your passenger will remember ?</div>
                 </div> 
             </div>
             <div 
@@ -35,7 +34,7 @@
                 <div class="project__surtitle">Concept</div>
                 <div class="project__txt">
                     Choose your destination from the classic search bar 
-                    or your preference.
+                    or from your preferences.
                 </div> 
             </div>
             <div 
@@ -51,7 +50,7 @@
             <div class="project__txtContainer">
                 <div class="project__surtitle">Feature</div>
                 <div class="project__txt">
-                    Driving through Paris ? <br>We suggest activities that are around 
+                    Driving through Paris ? <br>We suggest activities that are close to 
                     your current location.
                 </div> 
             </div>
@@ -73,8 +72,9 @@
             <div class="project__txtContainer">
                 <div class="project__surtitle">Tired ?</div>
                 <div class="project__txt">
-                    You’ve been driving for a long time ? <br>Tesla is 
-                    thinking about you and offers you rest areas nearby.
+                    You’ve been driving for a long time ?  <br>
+                    Tesla is thinking about you and is offering you 
+                    rest areas nearby.
                 </div> 
             </div>
             <div 
@@ -90,8 +90,8 @@
             <div class="project__txtContainer">
                 <div class="project__surtitle">Hungry ?</div>
                 <div class="project__txt">
-                    According to your lunch hour, Tesla notify 
-                    you, so you can find restaurants nearby.
+                    At lunchtime, Tesla notifies you, so you can find 
+                    restaurants around you.
                 </div> 
             </div>
             <div 
@@ -125,8 +125,8 @@
                 <div class="project__surtitle">Hesitation is a right</div>
                 <div class="project__txt">
                     Not so sure about what to do next ? <br>
-                    Just manage your activites by deleting them 
-                    and add others. <br>They are ordered by proximity. 
+                    Just manage your activities by deleting some and adding others. <br>
+                    They are ranked by proximity.
                 </div> 
             </div>
             <div 
@@ -137,9 +137,9 @@
             <div class="project__txtContainer">
                 <div class="project__surtitle">No more battery ? </div>
                 <div class="project__txt">
-                    You don’t know what to do while charging your Tesla ? 
-                    <br>Don’t worry we got your back by finding activities 
-                    next to your charging station.
+                    You don’t know what to do while charging your Tesla ? <br>
+                    Don’t worry, we’ve got your back ! We find you activities
+                     next to your charging station.
                 </div> 
             </div>
             <div 
@@ -155,9 +155,10 @@
             <div class="project__txtContainer">
                 <div class="project__surtitle">Feel like traveling on your own ? </div>
                 <div class="project__txt">
-                    You can disable the notification while you’re driving 
-                    if you feel them too intruisive. <br>We design products 
-                    to help you, not to disturb you.
+                    You can disable notifications while you’re driving, if you 
+                    have the feeling they are too intrusive. 
+                    <br>
+                    We design products to help you, not to disturb you.
                 </div> 
             </div>
             <div 

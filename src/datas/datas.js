@@ -73,7 +73,7 @@ const datas = {
         },
         experimentsBloc: {
             title: "Last but not least, some experiments",
-            description: "Since i’m still a student I like learning (always wil) and trying stuff. Here is a quick selection of some of my experiments so far. ",
+            description: "Since i’m still a student I like learning (always will) and trying stuff. Here is a quick selection of some of my experiments so far.",
             experiments: [
                 {
                     imgs: [
