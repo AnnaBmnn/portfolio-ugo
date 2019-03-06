@@ -54,7 +54,7 @@ const datas = {
             subSection: {
                 surtitle: "By the way",
                 title: 
-                    "I’m looking for a 6 month internship starting in june 2018.",
+                    "I’m looking for a 6 month internship starting in june 2019.",
                 contact: "Contact me",
                 instruction: "Click to copy to clipboard"
             }
@@ -64,7 +64,7 @@ const datas = {
             title: "To the moon and back",
             contact: "contact me",
             instruction: "Click to copy to clipboard",
-            description: 'Always on the for new opportunities. Once again feel free to'
+            description: 'Always on the look for new opportunities. Once again feel free to'
         },
         face: {
             title: "Putting a face on a folio",
