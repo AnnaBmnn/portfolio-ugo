@@ -11,6 +11,9 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home,
+      meta: {
+        title: "Ugo Olsak’s Portfolio - Product designer"
+      },
       props: {
         home: datas.home,
         commun: datas.commun
@@ -32,6 +35,9 @@ export default new Router({
     {
       path: "/project/tesla-x-tripadvisor",
       name: "projectTesla",
+      meta: {
+        title: "Tesla X TripAdvisor - Ugo Olsak’s Portfolio"
+      },
       props: {
       },
       // route level code-splitting
@@ -54,5 +60,8 @@ export default new Router({
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
-  }
+  },
+  
 });
+
+
