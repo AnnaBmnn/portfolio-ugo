@@ -108,7 +108,7 @@ export default {
         top: 100%;
         left: 0;
         transform: scaleX(0);
-        transition: 0.2s ease-in transform;
+        transition: 0.3s transform cubic-bezier(.78,0,.49,.91);
     }
     &:hover {
         &:after {

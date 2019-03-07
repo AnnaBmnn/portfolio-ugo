@@ -1,6 +1,9 @@
 <template>
     <div class="infos">
+        <div class="infos__overlay"></div>
+
         <div class="infos__social infos__section">
+
             <div 
                 class="infos__info"
                 v-for="(value, key, index) in commun"
@@ -46,6 +49,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .infos {
+    position: relative;
     width: 66%;
     margin: 10vh 0 ;
     padding:  7vh 0 7vh 10%;
@@ -58,6 +62,17 @@ export default {
         flex-direction: column;
 
     }    
+}
+.infos__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    z-index: 2;
+    transform-origin: right;
 }
 .infos__info {
     display: inline-block;

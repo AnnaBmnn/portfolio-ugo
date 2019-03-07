@@ -7,7 +7,8 @@
                 <img src="../assets/img/freelance-emoji.svg">
             </h2>
             <div class="smallSection__info" >
-                {{description}}
+                <span class="smallSection__description" v-html="description"/>
+
                 <CopyClickLink
                     v-bind:instruction="instruction"
                     v-bind:linkContent="contact"
@@ -15,7 +16,7 @@
                 />
             </div>
             <BackToTopText v-if="isFooter" />
-            <div v-if="isFooter" class="smallSection__credits">Credits @2018-2019 <span class="developed"> Developed by <a href="https://annabaumann.fr/" target="_blank" class="bold" >Anna Baumann</a><img src="../assets/img/dolphin.png"></span></div>
+            <div v-if="isFooter" class="smallSection__credits"><span class="developed"> Developed by <a href="https://annabaumann.fr/" target="_blank" class="bold" >Anna Baumann</a><img src="../assets/img/dolphin.png"></span>Credits @2018-2019 </div>
         </div>
     </section>
 </template>
@@ -63,7 +64,12 @@ export default {
     height: 80vh;
     display: flex;
     align-items: center;
+    @media (max-width: 1000px){
+        .container {
+            margin-bottom: 20vh;
+        }
 
+    }
     &.dark {
         background-color: #161616;
         color: white;
@@ -77,6 +83,9 @@ export default {
         }
         .smallSection__info {
             width: 40%;
+            .smallSection__description {
+                width: 100%;
+            }
         }
     }
     @media (max-width: 700px){
@@ -89,8 +98,9 @@ export default {
     font-weight: normal;
 }
 .smallSection__info {
-    width: 31%;
+    width: 33%;
     margin-top: 20px;
+    line-height: 1.5;
     .link {
         position: relative;
         color: white;
@@ -101,7 +111,16 @@ export default {
             position: absolute;
             top: 100%;
             left: 0;
+            transform: scaleX(0);
+            transition: 0.3s transform cubic-bezier(.78,0,.49,.91);
             background-color: white;
+        }
+    }
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: left;
+
         }
     }
     @media (max-width: 700px){
@@ -111,7 +130,7 @@ export default {
 .smallSection__title {
     margin: 0;
     font-family :'Gotham';
-    font-weight: normal;
+    font-weight: 400;
     @media (max-width: 700px){
         font-size: 1.75rem;
     }
@@ -125,25 +144,41 @@ export default {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    @media (max-width: 1000px){
+        text-align: center;
+    }
 }
 .developed {
     position: relative;
-    margin-left: 20px;
+    margin-right: 30px;
+
     img {
         margin-left: 8px;
         width: 20px;
         height: auto;
     }
-    &:before {
+    &:after {
         content: "";
         border-radius: 50%;
         height: 5px;
         width: 5px;
         background-color: black;
         position: absolute;
-        left: -15px;
+        right: -15px;
         top: 50%;
+
         transform: translateY(-50%);
+    }
+    @media (max-width: 1000px){
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;
+        display: inline-block;
+        &:after {
+            display: none;
+
+        }
+
     }
 }
 </style>

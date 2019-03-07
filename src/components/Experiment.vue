@@ -40,18 +40,9 @@ export default {
         width: 100%;
         overflow: hidden;
         height: auto;
-        &:hover {
-            img {
-                transform: scale(1.08);
-            }
-        }
         img {
             width: 100%;
             height: auto;
-            will-change: transform;
-            transition: transform 1.8s ease-in-out;
-
-            transform: scale(1);
         }
     }
 
@@ -71,6 +62,7 @@ export default {
     top: 100%;
     right: 0;
     text-align: right;
+    line-height: 1.5;
     @media (max-width: 700px){
         text-align: left;
         right: unset;

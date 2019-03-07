@@ -20,7 +20,6 @@
           v-bind:index="1"
         />
       </keep-alive>
-    </div> 
       <keep-alive>
         <SmallSection
           :style="{transform: 'translateY(-' + this.translateBlocY+ 'px)' }"
@@ -35,6 +34,8 @@
           theme="dark"
         /> 
       </keep-alive>
+    </div> 
+
 
       <div 
         class="bloc--2 "
@@ -98,7 +99,6 @@ export default {
   methods: {
     handleScroll (e) {
       const scroll = window.scrollY;
-
       this.scroll= scroll;
       const windowHeight = window.innerHeight;
       const blocFix = document.querySelector('.fixed');
@@ -109,22 +109,10 @@ export default {
       const bloc2Height = document.querySelector('.bloc--2').offsetHeight;
       const lastBlocFixed = document.querySelector('.bloc__smaller');
       const lastBlocFixedTop = lastBlocFixed.offsetTop;
-
-      if(scroll > bloc1Height - windowHeight){
-        blocFix.classList.add('opacity');
-      } else {
-        blocFix.classList.remove('opacity');
-      }
       if(scroll > bloc1Height + bloc2Height - windowHeight){
         lastBlocFixed.classList.add('opacity');
       } else {
         lastBlocFixed.classList.remove('opacity');
-      }
-      if (bloc2Scroll < (scroll + windowHeight)) {
-        let translate = scroll - bloc2Scroll + windowHeight;
-        this.translateBlocY = translate;
-      } else {
-        this.translateBlocY = 0;
       }
     }
   },
@@ -142,23 +130,11 @@ export default {
 </script>
 <style scoped lang="scss">
 .bloc--1 {
-  margin-bottom: 80vh;
+  // margin-bottom: 80vh;
   z-index: 10;
   position: relative;
 }
-.fixed {
-  margin-top: 20vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-  opacity: 0;
 
-  &.opacity {
-    opacity: 1;
-  }
-}
 .bloc--2 {
   position: relative;
   z-index: 10;

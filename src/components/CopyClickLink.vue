@@ -48,14 +48,24 @@ export default {
     position: relative;
     cursor: pointer;
     font-weight: 300;
+
     &:after {
         content: '';
         height: 1px;
-        width: calc(100%);
+        width: 100%;
         position: absolute;
         top: 100%;
         right: 0;
         background-color: black;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: 0.3s transform cubic-bezier(.78,0,.49,.91);
+    }
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
     }
     &:hover + .copyClickLink__instruction {
         opacity: 1;

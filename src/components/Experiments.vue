@@ -5,8 +5,7 @@
                 {{title}}
                 <img class="emoji" src="../assets/img/lab-emoji.svg">
             </h2>
-            <div class="experiments__description">
-                {{description}}
+            <div class="experiments__description" v-html="description">
             </div>
             <div class="experiments__container">
                 <experiment
@@ -56,6 +55,7 @@ export default {
     flex-direction: column;
 }
 .experiments__description {
+    line-height: 1.5;
     width: 50%;
     margin-top: 20px;
     @media (max-width: 700px){

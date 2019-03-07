@@ -8,8 +8,8 @@
                     {{title}}
                 <img src="../assets/img/face-emoji.svg">
             </h2>
-            <div class="faceBloc__description">
-                {{description}}
+            <div class="faceBloc__description" v-html="description">
+
             </div> 
         </div>
     </div>
@@ -89,6 +89,7 @@ export default {
 .faceBloc__description {
     width: 40%;
     margin: 20px 0;
+    line-height: 1.5;
     @media (max-width: 700px){
         width: 90%;
         line-height: 1.8;

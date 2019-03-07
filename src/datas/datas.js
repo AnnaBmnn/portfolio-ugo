@@ -1,10 +1,10 @@
 const datas = {
     home: {
         title: "Oh ! Hey there sunshine ",
-        description: "I’m Ugo Olsak, a<span class='bold'> fourth year student at HETIC</span> and <span class='bold'>freelancer</span>. Even though the digital environment is for me like water for a fish, I grew up wondering why things were made the way they are (...consider me a very self aware fish). This quest led me to an emerging passion, <span class='bold'>design.</span>",
+        description: "I’m Ugo Olsak, a<span class='bold'> fourth year student at HETIC</span> and <span class='bold'>freelancer</span>.<br> Even though the digital environment is for me like water for a fish, I grew up wondering why things were made the way they are (...consider me a very self aware fish).<br> This quest led me to an emerging passion, <span class='bold'>design.</span>",
         caseStudy: {
             title: "Case Studies",
-            description: "A quick selection of my work as an intern,freelance and student.",
+            description: "A quick selection of my work as an intern, freelance and student.",
             cases: [
                 {
                     year: "2018",
@@ -64,16 +64,16 @@ const datas = {
             title: "To the moon and back",
             contact: "contact me",
             instruction: "Click to copy to clipboard",
-            description: 'Always on the look for new opportunities. Once again feel free to'
+            description: 'Always on the look for new opportunities.<br> Once again feel free to '
         },
         face: {
             title: "Putting a face on a folio",
-            description: "Just so you know what I look like, in case we ever met.",
+            description: "Just so you know what I look like,<br> in case we ever met.",
             img: ""
         },
         experimentsBloc: {
             title: "Last but not least, some experiments",
-            description: "Since i’m still a student I like learning (always will) and trying stuff. Here is a quick selection of some of my experiments so far.",
+            description: "Since i’m still a student I like learning (always will) and trying stuff.<br>  Here is a quick selection of some of my experiments so far.",
             experiments: [
                 {
                     imgs: [

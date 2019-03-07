@@ -68,6 +68,8 @@ export default {
   width: 40%;
   align-self: flex-end;
   font-size: 1.2rem;
+  line-height: 1.5;
+
   @media (max-width: 700px){
     align-self: flex-start;
     width: 100%;
@@ -83,7 +85,7 @@ export default {
 }
 .caseStudies__description {
   font-size: 0.75rem; 
-  line-height: 30px;
+  line-height: 1.5;
 }
 .caseStudies__link {
   float: right;
@@ -110,13 +112,13 @@ export default {
 .casesStudies__byTheWaySurtitle {
   font-size: 1rem;
   font-weight: normal;
-  margin-left: 5%;
+  margin-left: 10%;
   @media (max-width: 700px){
     margin-left: 0;
   }
 }
 .casesStudies__byTheWayText {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   font-size: 2.5rem;
   line-height: 60px;

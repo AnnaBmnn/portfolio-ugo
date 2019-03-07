@@ -75,7 +75,7 @@ export default {
         width: 100%;
         &:hover {
             .project__img {
-                transform: scale(1.08);
+                transform: scale(1.02);
             }
         }
     }

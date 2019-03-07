@@ -36,7 +36,6 @@ export default {
   },
   mounted() {
     // this.$nextTick(() => {
-    console.log("mounted")
       const socialsOverlay = document.querySelector('.socials__overlay');
     
     if(socialsOverlay){

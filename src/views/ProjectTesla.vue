@@ -194,7 +194,19 @@ export default {
         }
     )
     }
-  }
+  },
+  mounted() {
+      console.log("mounted");
+      const title = document.querySelector('.title');
+      const description = document.querySelector('.landing__txt');
+      const infosOverlay = document.querySelector('.infos__overlay');
+      this.tl = new TimelineLite();
+      this.tl
+          .from(title, 0.5, {opacity: 0, transform: "translateY(15%)"})
+          .from(description, 0.5, {opacity: 0, transform: "translateY(5%)"})
+            .from(infosOverlay, 0.6, {transform: "scaleX(1)"})
+          .play();
+    }
 };
 </script>
 
@@ -207,7 +219,7 @@ export default {
         height: auto;
     }
     .container__img {
-        margin-bottom: 80px;
+        margin-bottom: 35vh;
     }
 }
 

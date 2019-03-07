@@ -41,6 +41,9 @@ export default {
         height: 1px;
         background-color: rgba(0,0,0,0.5);
     }
+    @media (max-width: 1000px){
+        display: none;
+    }
 }
 
 </style>
