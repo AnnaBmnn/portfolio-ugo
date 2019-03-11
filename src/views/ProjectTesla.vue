@@ -28,7 +28,7 @@
             <div 
                 class="container__img"
             >
-                <img :src="projectInfos.imgs[0][0]">
+                <video muted autoplay :src="projectInfos.imgs[0][0]"/>
             </div>
             <div class="project__txtContainer">
                 <div class="project__surtitle">Concept</div>
@@ -196,7 +196,6 @@ export default {
     }
   },
   mounted() {
-      console.log("mounted");
       const title = document.querySelector('.title');
       const description = document.querySelector('.landing__txt');
       const infosOverlay = document.querySelector('.infos__overlay');
@@ -218,15 +217,20 @@ export default {
         width: 100%;
         height: auto;
     }
+    video {
+
+        width: 100%;
+        height: auto;
+    }
     .container__img {
-        margin-bottom: 35vh;
+        margin-bottom: 25vh;
     }
 }
 
 .project__txtContainer {
     width: 90%;
     margin: 0 auto;
-    padding: 17vh 0 19vh;
+    padding: 0vh 0 25vh;
     @media (max-width: 900px){
         width: 100%;
     }

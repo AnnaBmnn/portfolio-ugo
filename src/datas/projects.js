@@ -11,7 +11,7 @@ const projects = [
         emoji: "../img/projects/tesla/emoji.svg",
         siteLink: "false",
         imgs: [
-            ["../img/projects/tesla/Bitmap01.png","../img/projects/tesla/Bitmap01@2x.png","../img/projects/tesla/Bitmap01@3x.png"],
+            ["../img/projects/tesla/Loader-TESLAXTA.mp4","../img/projects/tesla/Bitmap01@2x.png","../img/projects/tesla/Bitmap01@3x.png"],
             ["../img/projects/tesla/Bitmap02.png","../img/projects/tesla/Bitmap02@2x.png","../img/projects/tesla/Bitmap02@3x.png"],
             ["../img/projects/tesla/Bitmap03.png","../img/projects/tesla/Bitmap03@2x.png","../img/projects/tesla/Bitmap03@3x.png"],
             ["../img/projects/tesla/Bitmap04.png","../img/projects/tesla/Bitmap04@2x.png","../img/projects/tesla/Bitmap04@3x.png"],
