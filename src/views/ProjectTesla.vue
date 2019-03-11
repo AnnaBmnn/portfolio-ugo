@@ -16,27 +16,29 @@
                 context: projectInfos.context
             }"
         />
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Reflexion</div>
+            <div class="project__txt">
+                After a few user interviews, we identified many pain points that appeared during their car trip. 
+                <br>We then came with a question :
+                <div class="project__bold">How to transform a boring, ordinary trip to a meaningful and fun one that you and your passenger will remember ?</div>
+            </div> 
+        </div>
         <div class="container">
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Reflexion</div>
-                <div class="project__txt">
-                    After a few user interviews, we identified many pain points that appeared during their car trip. 
-                    <br>We then came with a question :
-                    <div class="project__bold">How to transform a boring, ordinary trip to a meaningful and fun one that you and your passenger will remember ?</div>
-                </div> 
-            </div>
             <div 
                 class="container__img"
             >
-                <video muted autoplay :src="projectInfos.imgs[0][0]"/>
+                <video muted autoplay loop :src="projectInfos.imgs[0][0]"/>
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Concept</div>
-                <div class="project__txt">
-                    Choose your destination from the classic search bar 
-                    or from your preferences.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Concept</div>
+            <div class="project__txt">
+                Choose your destination from the classic search bar 
+                or from your preferences.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
@@ -47,13 +49,15 @@
             >
                 <img :src="projectInfos.imgs[2][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Feature</div>
-                <div class="project__txt">
-                    Driving through Paris ? <br>We suggest activities that are close to 
-                    your current location.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Feature</div>
+            <div class="project__txt">
+                Driving through Paris ? <br>We suggest activities that are close to 
+                your current location.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
@@ -69,14 +73,16 @@
             >
                 <img :src="projectInfos.imgs[5][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Tired ?</div>
-                <div class="project__txt">
-                    You’ve been driving for a long time ?  <br>
-                    Tesla is thinking about you and is offering you 
-                    rest areas nearby.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Tired ?</div>
+            <div class="project__txt">
+                You’ve been driving for a long time ?  <br>
+                Tesla is thinking about you and is offering you 
+                rest areas nearby.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
@@ -87,13 +93,16 @@
             >
                 <img :src="projectInfos.imgs[7][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Hungry ?</div>
-                <div class="project__txt">
-                    At lunchtime, Tesla notifies you, so you can find 
-                    restaurants around you.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Hungry ?</div>
+            <div class="project__txt">
+                At lunchtime, Tesla notifies you, so you can find 
+                restaurants around you.
+            </div> 
+        </div>
+        <div class="container">                
+        
             <div 
                 class="container__img"
             >
@@ -109,39 +118,45 @@
             >
                 <img :src="projectInfos.imgs[10][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Not so fast</div>
-                <div class="project__txt">
-                    Want to have a digestive walk just after your 
-                    lunch break ? <br>Just look for a parc nearby.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Not so fast</div>
+            <div class="project__txt">
+                Want to have a digestive walk just after your 
+                lunch break ? <br>Just look for a parc nearby.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
                 <img :src="projectInfos.imgs[11][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Hesitation is a right</div>
-                <div class="project__txt">
-                    Not so sure about what to do next ? <br>
-                    Just manage your activities by deleting some and adding others. <br>
-                    They are ranked by proximity.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Hesitation is a right</div>
+            <div class="project__txt">
+                Not so sure about what to do next ? <br>
+                Just manage your activities by deleting some and adding others. <br>
+                They are ranked by proximity.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
                 <img :src="projectInfos.imgs[12][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">No more battery ? </div>
-                <div class="project__txt">
-                    You don’t know what to do while charging your Tesla ? <br>
-                    Don’t worry, we’ve got your back ! We find you activities
-                     next to your charging station.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">No more battery ? </div>
+            <div class="project__txt">
+                You don’t know what to do while charging your Tesla ? <br>
+                Don’t worry, we’ve got your back ! We find you activities
+                    next to your charging station.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
@@ -152,15 +167,17 @@
             >
                 <img :src="projectInfos.imgs[14][0]">
             </div>
-            <div class="project__txtContainer">
-                <div class="project__surtitle">Feel like traveling on your own ? </div>
-                <div class="project__txt">
-                    You can disable notifications while you’re driving, if you 
-                    have the feeling they are too intrusive. 
-                    <br>
-                    We design products to help you, not to disturb you.
-                </div> 
-            </div>
+        </div>
+        <div class="project__txtContainer">
+            <div class="project__surtitle">Feel like traveling on your own ? </div>
+            <div class="project__txt">
+                You can disable notifications while you’re driving, if you 
+                have the feeling they are too intrusive. 
+                <br>
+                We design products to help you, not to disturb you.
+            </div> 
+        </div>
+        <div class="container">                
             <div 
                 class="container__img"
             >
@@ -210,7 +227,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.container {
+    margin: 0;
+    background-color: #FAFAFA;
+    width: 100%;
+}
 .project {
     position: relative;
     img {
@@ -222,7 +243,12 @@ export default {
         width: 100%;
         height: auto;
     }
+    .project__txtContainer, .container__img {
+        width: 80%;
+        margin: 0 auto;
+    }
     .container__img {
+        line-height: 0.8;
         margin-bottom: 25vh;
     }
 }
