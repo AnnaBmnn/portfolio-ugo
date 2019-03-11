@@ -16,14 +16,21 @@
                 context: projectInfos.context
             }"
         />
-        <div class="container">
             <div 
                 class="container__img"
-                v-for="(value, key, index) in projectInfos.imgs"
+                v-for="(value, index) in projectInfos.imgs"
                 :key="index" 
             >
-                <img :src="value[0]">
-            </div>
+                <div class="container">
+                    <span class="project__index">{{index+1 < 10 ? "0" : ""}}{{index+1}}</span>
+                    <legend class="project__legend">{{value[1]}}</legend>
+                </div>
+
+                <div class="container__imgColor">
+                    <div class="container">
+                        <img :src="value[0]">
+                    </div>
+                </div>
         </div>
         <NextProject
             :index="(projectInfos.index)%3"
@@ -54,7 +61,6 @@ export default {
     }
   },
   mounted() {
-      console.log("mounted");
       const title = document.querySelector('.title');
       const description = document.querySelector('.landing__txt');
       const infosOverlay = document.querySelector('.infos__overlay');
@@ -77,6 +83,25 @@ export default {
     }
     .container__img {
         margin-bottom: 25vh;
+
     }
+    .container__imgColor {
+        line-height: 0.8;
+        background-color: #FAFAFA;
+    }
+}
+.project__index {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 9%;
+    padding-left: 2px;
+}
+.project__legend {
+    margin-left: 9%;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 3px;
+    padding: 0;
 }
 </style>

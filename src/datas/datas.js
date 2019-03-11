@@ -22,7 +22,7 @@ const datas = {
                         "../img/projects/tesla/tesla@2x.png",
                         "../img/projects/tesla/tesla@0,5x.png",
                     ],
-                    forme: "../img/projectForm.svg"
+                    forme: "../img/home/form_1.svg"
                 },
                 {
                     year: "2018",
@@ -35,7 +35,8 @@ const datas = {
                         "../img/projects/la-debraillee/la-debraillee@2x.png",
                         "../img/projects/la-debraillee/la-debraillee@3x.png",
                     ],
-                    forme: "../img/projectForm.svg"
+                    forme: "../img/home/form_2.svg"
+
                 },
                 {
                     year: "2018",
@@ -48,7 +49,8 @@ const datas = {
                         "../img/projects/economy/economy@2x.png",
                         "../img/projects/economy/economy@3x.png",
                     ],
-                    forme: "../img/projectForm.svg"
+                    forme: "../img/home/form_3.svg"
+
                 }
             ],
             subSection: {

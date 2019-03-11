@@ -2,39 +2,59 @@
     <router-link 
         class="project" 
         :to="`project/${slug}`"
+
     >  
-        <div class="project__imgContainer">
-        <img 
-            class="project__img"  
-            :src="imgs[0]"
-            :srcset="`
-                ${imgs[0]} 480w,
-                ${imgs[1]} 2x,
-                ${imgs[2]} 500w,
-                `"
+        <div 
+            @mouseenter="mouseEnter(slug, $event)"
+            @mouseleave="mouseLeave(slug, $event)"
         >
-        </div>
-        <span class="project__date">{{year}}</span>
-        <div class="project__infos">
-            <div class="project__info">
-                <span class="bold">Rôle</span>
-                <br>
-                <span class="">{{role}}</span>
+            <div 
+                class="project__imgContainer"
+
+            >
+                <img 
+                    class="project__img"  
+                    :src="imgs[0]"
+                    :srcset="`
+                        ${imgs[0]} 480w,
+                        ${imgs[1]} 2x,
+                        ${imgs[2]} 500w,
+                        `"
+                >
             </div>
-            <div class="project__info">
-                <span class="bold">Contexte</span>
-                <br>
-                <span class="">{{context}}</span>
+            <span class="project__date">{{year}}</span>
+            <div class="project__infos">
+                <div class="project__info">
+                    <span class="bold">Rôle</span>
+                    <br>
+                    <span class="">{{role}}</span>
+                </div>
+                <div class="project__info">
+                    <span class="bold">Contexte</span>
+                    <br>
+                    <span class="">{{context}}</span>
+                </div>
+
             </div>
 
+            <h3 class="project__title">
+                {{name}}
+                <span class="project__numero">{{index}}</span>
+            </h3>
+            <router-link :to="`project/${slug}`" class="project__link">View Case</router-link>
+            <div class="project__svg">
+                <svg  width="730" height="640" viewBox="0 0 520 640">
+                    <defs> 
+                        <filter id="turb">
+                            <feTurbulence :class="`turbwave__${slug}`" type="fractalNoise" baseFrequency="0.00" numOctaves="2"
+                                result="turbulence_3" data-filterId="3" />
+                            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="40" />
+                        </filter>
+                    </defs>
+                    <image id="img" x="20" y="20" width="680px" height="600px" v-bind:xlink:href="forme" filter="url(#turb)" />
+                </svg>
+            </div>
         </div>
-
-        <h3 class="project__title">
-            {{name}}
-            <span class="project__numero">{{index}}</span>
-        </h3>
-        <router-link :to="`project/${slug}`" class="project__link">View Case</router-link>
-
         
     </router-link >
 </template>
@@ -51,12 +71,48 @@ export default {
         year: String,
         role: String,
         context: String,
-        index: Number
+        index: Number,
+        forme: String
+    },
+    data: function(){
+        return {
+            tl: ""
+        }
     },
     components: {
     },
     methods: {
+        mouseEnter: function(elementHover, event){
+            // const hoverElementDom = `.turbwave__${elementHover}`;
+            // const formeElement = document.querySelector(hoverElementDom);
+            // console.log(formeElement);
+            // this.tl = TweenMax.to(formeElement, 2, {
+            //     attr:{"baseFrequency":0.01},
+            //     repeat:-1,
+            //     yoyo:true
+            // });
+            // console.log(this.tl);
 
+        },
+        mouseLeave: function(elementHover, event){
+            // this.tl.baseFrequencyX = 0;
+            // this.tl.repeat = 1;
+            // const hoverElementDom = `.turbwave__${elementHover}`;
+            // const formeElement = document.querySelector(hoverElementDom);
+            // this.tl = TweenMax.to(formeElement, 0.2, {
+            //     attr:{"baseFrequency":0.00},
+            //     repeat:1,
+            //     yoyo:false
+            // });   
+            // console.log(this.tl);
+
+        },
+        mounted() { 
+            const { box } = this.$refs
+            const timeline = new TimelineLite() 
+            
+            timeline.to(box, 1, { x: 200, rotation: 90 }) 
+        } 
     }
 
 };
@@ -80,7 +136,14 @@ export default {
         }
     }
     
-
+    .project__svg {
+        position: absolute;
+        top: -2vh;
+        left: -6vw;
+        // z-index: -1;
+        // height: 100%;
+        width: 100%;
+    }
     .project__img {
         position: relative;
         object-fit: cover;
