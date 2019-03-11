@@ -67,7 +67,7 @@ const projects = [
             ["../img/projects/economy/Notes-de-blog.jpg", "Blog list"],
             ["../img/projects/economy/economy02.png", "About"],
             ["../img/projects/economy/economy08.png", "Events list"],
-            ["../img/projects/economy/economy00.png", "Event (récup img)"],
+            ["../img/projects/economy/event.jpg", "Event"],
             ["../img/projects/economy/economy03.png", "Event rebroadcast list"],
             ["../img/projects/economy/economy04.png", "Event rebroadcast"],
             ["../img/projects/economy/economy05.png", "Profil"],

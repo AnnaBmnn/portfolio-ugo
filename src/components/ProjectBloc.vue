@@ -43,7 +43,7 @@
             </h3>
             <router-link :to="`project/${slug}`" class="project__link">View Case</router-link>
             <div class="project__svg">
-                <svg  width="730" height="640" viewBox="0 0 520 640">
+                <!-- <svg  width="730" height="640" viewBox="0 0 520 640">
                     <defs> 
                         <filter id="turb">
                             <feTurbulence :class="`turbwave__${slug}`" type="fractalNoise" baseFrequency="0.00" numOctaves="2"
@@ -52,7 +52,7 @@
                         </filter>
                     </defs>
                     <image id="img" x="20" y="20" width="680px" height="600px" v-bind:xlink:href="forme" filter="url(#turb)" />
-                </svg>
+                </svg> -->
             </div>
         </div>
         
