@@ -18,9 +18,9 @@ const datas = {
                         "../img/projects/tesla/emoji@0,5x.png",
                     ],
                     imgs: [
-                        "../img/projects/tesla/tesla.png",
-                        "../img/projects/tesla/tesla@2x.png",
-                        "../img/projects/tesla/tesla@0,5x.png",
+                        "../img/projects/tesla/tesla-img.jpg",
+                        "../img/projects/tesla/tesla-img.jpg",
+                        "../img/projects/tesla/tesla-img.jpg",
                     ],
                     forme: "../img/home/form_1.svg"
                 },
