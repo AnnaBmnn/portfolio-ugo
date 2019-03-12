@@ -1,7 +1,7 @@
 <template>
   <header class="nav">
     <router-link class="nav__link bold nav__link--olsak" to="/"><span>Olsak.</span></router-link>
-    <a href="../Olsak_Ugo_CV.pdf" target="_blank" class="nav__link nav__link--resume" >Resume</a>
+    <a href="../Resume-UgoOlsak.pdf" target="_blank" class="nav__link nav__link--resume" >Resume</a>
   </header>
 </template>
 
