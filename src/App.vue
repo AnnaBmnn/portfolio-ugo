@@ -11,6 +11,9 @@
 import Header from "@/components/Header.vue";
 import { TimelineLite } from 'gsap';
 
+
+
+
 export default {
   name: "app",
   components: {
