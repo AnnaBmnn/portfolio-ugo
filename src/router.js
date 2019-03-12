@@ -67,7 +67,7 @@ const router = new Router({
 
 Vue.use(VueAnalytics, {
   // this one of course needs to me a real domain ID
-  id: 'UA-135674086-1',
+  id: 'UA-136105445-1',
  // use the `router` instance here 
   router,
   debug: {
