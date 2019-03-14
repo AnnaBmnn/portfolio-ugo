@@ -11,36 +11,29 @@
 // import { TimelineMax } from 'gsap';
 import WorksBloc from "@/components/WorksBloc.vue";
 
-
-
 export default {
   name: "works",
   components: {
     WorksBloc
   },
   data() {
-      return {
-      }
+    return {};
   },
   props: {
     commun: Object
   },
-  methods: {
-  },
-  created () {
-  },
-  destroyed () {
-  },
+  methods: {},
+  created() {},
+  destroyed() {},
   mounted() {
-	  // init controller
-
+    // init controller
   }
 };
 </script>
 <style scoped lang="scss">
 .works {
-    background-color: #161616;
-    color: white;
-    min-height: 100vh;
+  background-color: #161616;
+  color: white;
+  min-height: 100vh;
 }
 </style>

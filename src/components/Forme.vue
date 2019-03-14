@@ -14,14 +14,13 @@
 <script>
 export default {
   name: "Forme",
-  props: {
-  }
+  props: {}
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .mysvg {
-    transform: scale(2);
+  transform: scale(2);
 }
 </style>

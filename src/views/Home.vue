@@ -75,7 +75,6 @@ import SmallSection from "@/components/SmallSection.vue";
 import Experiments from "@/components/Experiments.vue";
 import FaceBloc from "@/components/FaceBloc.vue";
 
-
 export default {
   name: "home",
   components: {
@@ -87,44 +86,38 @@ export default {
     FaceBloc
   },
   data() {
-      return {
-          scroll: 0,
-          translateBlocY: 0,
-      }
+    return {
+      scroll: 0,
+      translateBlocY: 0
+    };
   },
   props: {
     home: Object,
     commun: Object
   },
   methods: {
-    handleScroll (e) {
+    handleScroll() {
       const scroll = window.scrollY;
-      this.scroll= scroll;
+      this.scroll = scroll;
       const windowHeight = window.innerHeight;
-      const blocFix = document.querySelector('.fixed');
-      const blocFixHeight = blocFix.offsetHeight;
-      
-      const bloc1Height = document.querySelector('.bloc--1').offsetHeight;
-      const bloc2Scroll = document.querySelector('.bloc--2').offsetTop;
-      const bloc2Height = document.querySelector('.bloc--2').offsetHeight;
-      const lastBlocFixed = document.querySelector('.bloc__smaller');
-      const lastBlocFixedTop = lastBlocFixed.offsetTop;
-      if(scroll > bloc1Height + bloc2Height - windowHeight){
-        lastBlocFixed.classList.add('opacity');
+      const bloc1Height = document.querySelector(".bloc--1").offsetHeight;
+      const bloc2Height = document.querySelector(".bloc--2").offsetHeight;
+      const lastBlocFixed = document.querySelector(".bloc__smaller");
+      if (scroll > bloc1Height + bloc2Height - windowHeight) {
+        lastBlocFixed.classList.add("opacity");
       } else {
-        lastBlocFixed.classList.remove('opacity');
+        lastBlocFixed.classList.remove("opacity");
       }
     }
   },
-  created () {
-    window.addEventListener('scroll', this.handleScroll);
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   mounted() {
-	  // init controller
-
+    // init controller
   }
 };
 </script>

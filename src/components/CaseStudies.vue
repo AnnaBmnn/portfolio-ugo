@@ -70,21 +70,21 @@ export default {
   font-size: 1.2rem;
   line-height: 1.5;
 
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     align-self: flex-start;
     width: 100%;
   }
 }
 .caseStudies__title {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-weight: 500;
   margin-bottom: 20px;
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     font-size: 1.75rem;
   }
 }
 .caseStudies__description {
-  font-size: 0.75rem; 
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 .caseStudies__link {
@@ -92,7 +92,7 @@ export default {
   position: relative;
   margin-top: 30px;
   &:after {
-    content: '';
+    content: "";
     height: 1px;
     width: 100%;
     position: absolute;
@@ -100,20 +100,19 @@ export default {
     left: 0;
     background-color: black;
   }
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     float: left;
     margin-top: 15px;
-
   }
 }
 .casesStudies__byTheWay {
-  margin: 20vh 0 ;
+  margin: 20vh 0;
 }
 .casesStudies__byTheWaySurtitle {
   font-size: 1rem;
   font-weight: normal;
   margin-left: 10%;
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     margin-left: 0;
   }
 }
@@ -123,12 +122,10 @@ export default {
   font-size: 2.5rem;
   line-height: 60px;
   letter-spacing: 3;
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     width: 100%;
     font-size: 1.7rem;
     line-height: 1.8;
   }
 }
-
-
 </style>

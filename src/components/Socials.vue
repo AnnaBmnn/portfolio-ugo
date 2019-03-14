@@ -35,92 +35,89 @@
 
 <script>
 export default {
-    name: "socials",
-    props: {
-        contact: String,
-        social: Object
-    },
+  name: "socials",
+  props: {
+    contact: String,
+    social: Object
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .socials {
-    width: 66%;
-    margin: 10vh 0 ;
-    padding:  7vh 0 7vh 10%;
-    box-sizing: border-box;
-    background-color: #FAFAFA;
-    font-size: 1rem;
-    display: flex;
-    position: relative;
-    @media (max-width: 700px){
-        width: 100%;
-        flex-direction: column;
-
-    }    
+  width: 66%;
+  margin: 10vh 0;
+  padding: 7vh 0 7vh 10%;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  font-size: 1rem;
+  display: flex;
+  position: relative;
+  @media (max-width: 700px) {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 .socials__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    z-index: 2;
-    transform-origin: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  z-index: 2;
+  transform-origin: right;
 }
 .socials__contact {
-    width: 42%;
-    @media (max-width: 700px){
-        margin-bottom: 30px;
-    }    
+  width: 42%;
+  @media (max-width: 700px) {
+    margin-bottom: 30px;
+  }
 }
 .socials__social {
-    width: 57%;
-    @media (max-width: 700px){
-        width: 90%;
-    } 
+  width: 57%;
+  @media (max-width: 700px) {
+    width: 90%;
+  }
 }
 .socials__title {
-    line-height: 1;
-    margin-bottom: 2vh;
-    @media (max-width: 700px){
-        margin-bottom: 5px;
-    }  
+  line-height: 1;
+  margin-bottom: 2vh;
+  @media (max-width: 700px) {
+    margin-bottom: 5px;
+  }
 }
 .socials__item {
-    line-height: 1;
-    margin-right: 40px;
-    display: inline-block;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 0;
+  line-height: 1;
+  margin-right: 40px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
 
+  &:after {
+    transform-origin: right;
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.3s transform cubic-bezier(0.78, 0, 0.49, 0.91);
+  }
+  &:hover {
     &:after {
-        transform-origin: right;
-        content: '';
-        background-color: black;
-        height: 1px;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        transform: scaleX(0);
-        transition: 0.3s transform cubic-bezier(.78,0,.49,.91);
+      transform: scaleX(1);
+      transform-origin: left;
     }
-    &:hover {
-        &:after {
-            transform: scaleX(1);
-            transform-origin: left;
-
-        }
-    }
-    @media (max-width: 700px){
-        width: 50%;
-        margin-right: 0px;
-    } 
+  }
+  @media (max-width: 700px) {
+    width: 50%;
+    margin-right: 0px;
+  }
 }
-
 </style>

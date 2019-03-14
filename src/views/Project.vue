@@ -43,8 +43,7 @@ import ArrowFill from "@/components/ArrowFill.vue";
 import Landing from "@/components/Landing.vue";
 import { projects } from "../datas/projects.js";
 import NextProject from "@/components/NextProject.vue";
-import { TimelineLite } from 'gsap';
-
+import { TimelineLite } from "gsap";
 
 export default {
   name: "project",
@@ -53,55 +52,54 @@ export default {
     Landing,
     NextProject
   },
-  data: function(){
+  data: function() {
     return {
-      projectInfos: projects.find((project)=>{
+      projectInfos: projects.find(project => {
         return project.slug == this.$route.params.slug;
-    })
-    }
+      })
+    };
   },
   mounted() {
-      const title = document.querySelector('.title');
-      const description = document.querySelector('.landing__txt');
-      const infosOverlay = document.querySelector('.infos__overlay');
-      this.tl = new TimelineLite();
-      this.tl
-          .from(title, 0.5, {opacity: 0, transform: "translateY(15%)"})
-          .from(description, 0.5, {opacity: 0, transform: "translateY(5%)"})
-            .from(infosOverlay, 0.6, {transform: "scaleX(1)"})
-          .play();
-    }
+    const title = document.querySelector(".title");
+    const description = document.querySelector(".landing__txt");
+    const infosOverlay = document.querySelector(".infos__overlay");
+    this.tl = new TimelineLite();
+    this.tl
+      .from(title, 0.5, { opacity: 0, transform: "translateY(15%)" })
+      .from(description, 0.5, { opacity: 0, transform: "translateY(5%)" })
+      .from(infosOverlay, 0.6, { transform: "scaleX(1)" })
+      .play();
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .project {
-    position: relative;
-    img {
-        width: 100%;
-        height: auto;
-    }
-    .container__img {
-        margin-bottom: 25vh;
-
-    }
-    .container__imgColor {
-        line-height: 0.8;
-        background-color: #FAFAFA;
-    }
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .container__img {
+    margin-bottom: 25vh;
+  }
+  .container__imgColor {
+    line-height: 0.8;
+    background-color: #fafafa;
+  }
 }
 .project__index {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 9%;
-    padding-left: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 9%;
+  padding-left: 2px;
 }
 .project__legend {
-    margin-left: 9%;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    font-weight: 200;
-    letter-spacing: 3px;
-    padding: 0;
+  margin-left: 9%;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 3px;
+  padding: 0;
 }
 </style>

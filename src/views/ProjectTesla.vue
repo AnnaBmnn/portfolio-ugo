@@ -204,82 +204,81 @@ export default {
     Landing,
     NextProject
   },
-  data: function(){
+  data: function() {
     return {
-        projectInfos: projects.find((project)=>{
-            return project.slug == "tesla-x-tripadvisor";
-        }
-    )
-    }
+      projectInfos: projects.find(project => {
+        return project.slug == "tesla-x-tripadvisor";
+      })
+    };
   },
   mounted() {
-        const title = document.querySelector('.title');
-        const description = document.querySelector('.landing__txt');
-        const infosOverlay = document.querySelector('.infos__overlay');
-        this.tl = new TimelineLite();
-        this.tl
-            .from(title, 0.5, {opacity: 0, transform: "translateY(15%)"})
-            .from(description, 0.5, {opacity: 0, transform: "translateY(5%)"})
-                .from(infosOverlay, 0.6, {transform: "scaleX(1)"})
-            .play();
-    }
+    const title = document.querySelector(".title");
+    const description = document.querySelector(".landing__txt");
+    const infosOverlay = document.querySelector(".infos__overlay");
+    this.tl = new TimelineLite();
+    this.tl
+      .from(title, 0.5, { opacity: 0, transform: "translateY(15%)" })
+      .from(description, 0.5, { opacity: 0, transform: "translateY(5%)" })
+      .from(infosOverlay, 0.6, { transform: "scaleX(1)" })
+      .play();
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .container {
-    margin: 0;
-    background-color: #FAFAFA;
-    width: 100%;
+  margin: 0;
+  background-color: #fafafa;
+  width: 100%;
 }
 .project {
-    position: relative;
-    img {
-        width: 100%;
-        height: auto;
-    }
-    video {
-
-        width: 100%;
-        height: auto;
-    }
-    .project__txtContainer, .container__img {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .container__img {
-        line-height: 0.8;
-        margin-bottom: 25vh;
-    }
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  video {
+    width: 100%;
+    height: auto;
+  }
+  .project__txtContainer,
+  .container__img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container__img {
+    line-height: 0.8;
+    margin-bottom: 25vh;
+  }
 }
 
 .project__txtContainer {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0vh 0 25vh;
-    @media (max-width: 900px){
-        width: 100%;
-    }
+  width: 90%;
+  margin: 0 auto;
+  padding: 0vh 0 25vh;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 .project__surtitle {
-    font-family: 'Graphik', sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    letter-spacing: 0.075rem;
+  font-family: "Graphik", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.075rem;
 }
 .project__bold {
-    font-weight: normal;
+  font-weight: normal;
 }
 .project__txt {
-    font-family: 'Graphik', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 0.18rem;
-    line-height: 3.75rem;
-    font-weight: 300;
-    @media (max-width: 900px){
-        font-size: 2rem;
-        letter-spacing: 0.10rem;
-        line-height: 2.5rem;
-    }
+  font-family: "Graphik", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.18rem;
+  line-height: 3.75rem;
+  font-weight: 300;
+  @media (max-width: 900px) {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 2.5rem;
+  }
 }
 </style>
